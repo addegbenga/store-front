@@ -1,7 +1,10 @@
-import type { NextPage } from 'next';
+import Button from '@/components/ui/Button';
 
-const Home: NextPage = () => {
-  return <div>Hello word</div>;
-};
-
-export default Home;
+export default function index() {
+  return (
+    <div>
+      My bra they reset some tie
+      <Button>Hello world</Button>
+    </div>
+  );
+}
