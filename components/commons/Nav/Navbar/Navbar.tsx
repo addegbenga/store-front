@@ -1,8 +1,6 @@
 import { FaBars } from 'react-icons/fa';
 import { AiOutlineSearch } from 'react-icons/ai';
-interface INavProps {
-  text: string;
-}
+interface INavProps {}
 
 const Navbar: React.FC<INavProps> = () => {
   return (

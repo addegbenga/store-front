@@ -1,10 +1,10 @@
-import Button from '@/components/ui/Button';
+import MainLayout from '@/components/commons/Layout/MainLayout';
+import HomePageSections from '@/components/Landing';
 
 export default function index() {
   return (
-    <div>
-      My bra they reset some tie
-      <Button>Hello world</Button>
-    </div>
+    <MainLayout>
+      <HomePageSections />
+    </MainLayout>
   );
 }
