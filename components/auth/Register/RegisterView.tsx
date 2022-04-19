@@ -57,7 +57,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           </form>
         </div>
       </div>
-      <div className="w-full hidden md:block  overflow-hidden">
+      <div className="w-full -mt-[2.3rem] hidden md:block  overflow-hidden">
         <Image
           objectPosition=" 20% 10%"
           src="/assets/registerbanner.jpg"
