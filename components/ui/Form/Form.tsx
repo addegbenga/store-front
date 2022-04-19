@@ -1,18 +1,8 @@
 import React from 'react';
 
-interface IFormProps {
-  children: any;
-  onChange: any;
-  onSubmit: any;
-  label: string;
-}
+interface IFormProps {}
 
-const Form: React.FC<IFormProps> = ({
-  children,
-  onChange,
-  onSubmit,
-  label,
-}) => {
+const Form: React.FC<IFormProps> = () => {
   return (
     <div>
       <div></div>
