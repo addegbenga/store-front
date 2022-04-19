@@ -5,7 +5,7 @@ interface INavProps {}
 const Navbar: React.FC<INavProps> = () => {
   return (
     <div>
-      <div className="bg-white md:py-12 py-6">
+      <div className="bg-white  md:py-12 py-6  border-b border-black border-opacity-5">
         <div className="flex 2xl:container px-4 mx-auto justify-between items-center">
           ASOS
           <div className="hidden md:flex  gap-10 text-xs">
