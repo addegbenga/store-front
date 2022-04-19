@@ -7,7 +7,7 @@ const Navbar: React.FC<INavProps> = () => {
     <div>
       <div className="bg-white md:py-12 py-6">
         <div className="flex 2xl:container px-4 mx-auto justify-between items-center">
-          LOGO
+          ASOS
           <div className="hidden md:flex  gap-10 text-xs">
             <h1>SKINS</h1>
             <h1>FEATURES</h1>

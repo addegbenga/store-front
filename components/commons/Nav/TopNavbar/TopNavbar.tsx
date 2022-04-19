@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 interface ITopNavProps {}
 const TopNavbar: React.FC<ITopNavProps> = () => {
   return (
@@ -6,8 +6,12 @@ const TopNavbar: React.FC<ITopNavProps> = () => {
       <div className="bg-[#b99d6b]">
         <div className="flex 2xl:container p-2 px-4 md:px-10 mx-auto justify-between">
           <div className="flex gap-6 text-white text-sm">
-            <h1>Links</h1>
-            <h1 className="hidden md:block">Wishlist</h1>
+            <Link href="/">Links</Link>
+            {/* <h1 className="hidden md:block">Wishlist</h1> */}
+            <div className="hidden md:block">
+              <Link href="/account/Login">Wishlist</Link>
+            </div>
+
             <h1 className="hidden md:block">Checkout</h1>
           </div>
 

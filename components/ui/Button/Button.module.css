@@ -1,0 +1,36 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .root {
+    @apply cursor-pointer inline-flex
+    px-10 py-5 leading-6 transition ease-in-out duration-150
+    shadow-sm text-center justify-center uppercase
+    border border-transparent items-center text-sm font-semibold
+    tracking-wide hidden;
+    max-height: 64px;
+  }
+  .root:hover {
+    @apply border-accent-9 bg-accent-6;
+  }
+  .root:focus {
+    @apply shadow-outline-normal outline-none;
+  }
+  .root[data-active] {
+    @apply bg-red-100;
+  }
+  .loading {
+    @apply text-blue-300 cursor-not-allowed;
+  }
+
+  .slim {
+    @apply py-2 transform-none normal-case;
+  }
+  .ghost {
+    @apply border   text-sm;
+  }
+
+  .ghost:hover {
+    @apply border;
+  }
+}
