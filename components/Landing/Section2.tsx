@@ -32,7 +32,7 @@ export default function Gridx2() {
             >
               <div className="md:h-full relative z-10 h-[25rem] p-5">
                 <div className="border h-full flex  justify-center items-center relative  gap-3 ">
-                  <h1 className="text-white text-7xl md:text-[8rem] md:leading-[9rem] border-y border-double border-y-4 font-bold">
+                  <h1 className="text-white text-7xl lg:text-[8rem] md:leading-[9rem] border-y border-double border-y-4 font-bold">
                     SALE
                   </h1>
                 </div>

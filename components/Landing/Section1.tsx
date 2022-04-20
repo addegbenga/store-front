@@ -7,7 +7,7 @@ const Section1: React.FC = () => {
   return (
     <div className="bg-white ">
       <div className=" md:grid gap-1 md:grid-cols-2  md:h-[100vh] mx-1">
-        <div className="h-[28rem]  md:h-full">
+        <div className="h-[28rem] mb-1  md:h-full">
           <MySwiper />
         </div>
         {/* </Cards> */}
@@ -27,7 +27,7 @@ const Section1: React.FC = () => {
                   layout="fixed"
                   alt="logo"
                 />
-                <h1 className="text-white text-2xl md:text-2xl ">
+                <h1 className="text-white text-2xl text-center md:text-2xl ">
                   SHARE YOUR STORY
                 </h1>
                 <span className="text-white">#insta_vendor</span>
