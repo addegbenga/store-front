@@ -2,7 +2,7 @@ import React from 'react';
 interface IFooterProps {}
 const Footer: React.FC<IFooterProps> = () => {
   return (
-    <div className="bg-[#43474d] ">
+    <div className="bg-[#43474d] mt-1 ">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row gap-14   px-4 py-32 ">
           <div className=" flex flex-col gap-8 ">
