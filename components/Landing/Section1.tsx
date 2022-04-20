@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Cards from '@/components/ui/Card';
+import Card from '@/components/ui/Card/Cards';
 import { MySwiper } from './Swiper';
 import { RiScissorsFill } from 'react-icons/ri';
 
@@ -7,19 +7,19 @@ const Section1: React.FC = () => {
   return (
     <div className="bg-white ">
       <div className=" md:grid gap-1 md:grid-cols-2  md:h-[100vh] mx-1">
-        {/* <Cards width={100}> */}
         <div className="h-[28rem]  md:h-full">
           <MySwiper />
         </div>
         {/* </Cards> */}
         <div className="grid md:grid-cols-2  gap-1 ">
           <div className="grid  gap-1 ">
-            <Cards
-              height={27}
-              width={100}
-              background="/assets/share_insta_1.jpg"
+            <Card
+              layoutProps="fill"
+              imgProp="banner"
+              className=" absolute w-full h-full  "
+              imgSrc="/assets/share_insta_1.jpg"
             >
-              <div className="flex flex-col gap-1 justify-center items-center h-[24rem] md:h-full">
+              <div className="flex flex-col gap-1 relative z-10 h-[25rem] justify-center items-center  md:h-full">
                 <Image
                   src="/assets/insta.svg"
                   width={40}
@@ -32,30 +32,42 @@ const Section1: React.FC = () => {
                 </h1>
                 <span className="text-white">#insta_vendor</span>
               </div>
-            </Cards>
-            <Cards height={27} width={100} background="/assets/banner_3.jpg">
-              <div className="flex text-white justify-center items-center h-[28rem] md:h-full">
+            </Card>
+            <Card
+              layoutProps="fill"
+              imgProp="banner"
+              className=" absolute w-full h-full  "
+              imgSrc="/assets/banner_3.jpg"
+            >
+              <div className="flex text-white relative z-10 h-[25rem]  justify-center items-center  md:h-full">
                 <h1 className="lg:text-6xl px-20 md:px-0  flex items-center text-2xl tracking-wider md:tracking-normal text-center font-semibold">
                   TIMELESS DESIGN
                 </h1>
               </div>
-            </Cards>
+            </Card>
           </div>
           <div className="grid  gap-1">
             <div className="grid row-span-2">
-              <Cards
-                height={27}
-                width={100}
-                background="/assets/slide_4_600x.jpg"
+              <Card
+                layoutProps="fill"
+                imgProp="banner"
+                className=" absolute w-full h-full  "
+                imgSrc="/assets/slide_4_600x.jpg"
               >
-                <div className="md:h-full flex w-full text-center text-white justify-center items-center h-[28rem]">
+                <div className="md:h-full  relative z-10 h-[25rem] flex w-full text-center text-white justify-center items-center ">
                   <h1 className="md:text-5xl text-xl">LIMITED EDITION</h1>
                 </div>
-              </Cards>
+              </Card>
             </div>
             <div className="grid md:row-span-7">
-              <Cards color="#43474d" height={27} width={100}>
-                <div className="md:h-full h-[25rem] p-5">
+              <Card
+                layoutProps="fill"
+                imgProp="bg"
+                className=" bg-[#43474d] absolute w-full h-full  "
+                imgSrc=""
+                isBg={true}
+              >
+                <div className="md:h-full h-[25rem] relative z-10  p-5">
                   <div className="border h-full flex justify-center items-center  flex-col gap-3 ">
                     <RiScissorsFill size={36} color="white" />
                     <h1 className="text-white text-2xl text-center">
@@ -66,7 +78,7 @@ const Section1: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </Cards>
+              </Card>
             </div>
           </div>
         </div>

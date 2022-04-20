@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import Link from 'next/link';
 export interface ILoginProps {}
 
 const ForgotPassowordView: React.FC<ILoginProps> = () => {
   return (
     <div className=" flex ">
-      <div className="w-full md:pr-10 mt-10 px-4">
+      <div className=" w-full md:w-5/6 md:pr-10 mt-10 px-4">
         <div className="flex gap-2 items-center">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Reset your password</h1>
@@ -23,10 +24,22 @@ const ForgotPassowordView: React.FC<ILoginProps> = () => {
                 placeholder="Your email*"
               />
             </div>
-            <button className="w-full bg-[#b99d6b] text-white text-center border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border md:w-2/6">
-              LOGIN ACCOUNT
+            <button className="w-full bg-[#b99d6b] text-white text-center border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border ">
+              RESET PASSWORD
             </button>
             {/* <Button>CREATE ACCOUNT</Button> */}
+            <p className=" text-center">or</p>
+            <div className="flex gap-3 justify-center">
+              <p className="text-[#b99d6b]">
+                {' '}
+                <Link href="/account/ForgotPassword">Login account</Link>
+              </p>{' '}
+              <span className="text-[#b99d6b]">/</span>
+              <p className="text-[#b99d6b]">
+                {' '}
+                <Link href="/account/Register">Create account</Link>
+              </p>
+            </div>
           </form>
         </div>
       </div>
