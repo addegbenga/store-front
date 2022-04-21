@@ -27,7 +27,7 @@ export default function Gridx5() {
               className="   absolute w-full h-full  "
               imgSrc="/assets/slide_12.jpg"
             >
-              <div className=" h-full  flex justify-center items-center">
+              <div className=" h-full relative z-10  flex justify-center items-center">
                 <div className="border-4 flex justify-center items-center text-white h-60 w-60">
                   <div className="text-5xl">
                     <h1>LAYER</h1>
