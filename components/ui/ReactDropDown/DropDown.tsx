@@ -47,9 +47,9 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
                   category.step === 2 ? (
                     <div key={index}>
                       <div className="">
-                        <h1 className="text-[0.8rem] px-4">{item.name}</h1>
+                        <h1 className="text-[1rem] px-4">{item.name}</h1>
                         {item.list.map((item, index) => (
-                          <p key={index} className="text-[0.7rem] py-1 pl-8 ">
+                          <p key={index} className="text-[0.9rem] py-1 pl-8 ">
                             {item}
                           </p>
                         ))}
@@ -59,7 +59,7 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
                     <div key={index}>
                       <div>
                         {item.list.map((item, index) => (
-                          <p key={index} className="text-[0.7rem] py-1 pl-4 ">
+                          <p key={index} className="text-[1rem] py-1 pl-2 ">
                             {item}
                           </p>
                         ))}
