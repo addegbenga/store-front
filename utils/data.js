@@ -1,87 +1,75 @@
 export const dataCategory = [
   {
-    img: "/1available services.jpeg",
-    title: "Available services",
     id: 1,
+    title: 'FASHION',
+    step: 2,
+    description: [
+      {
+        name: 'Woman',
+        list: [
+          'Beige - Fashion',
+          'Adalle Lace Long Dress',
+          'Comfort Bell Bottoms',
+          'Black Overshirt Dress',
+          'Long sleeve black fashion',
+          'Woman Flatform Sandals',
+        ],
+      },
+      {
+        name: 'SHOES',
+        list: [
+          'Beige - Fashion',
+          'Women fashion boot',
+          'Tennis new balance',
+          'Tennis Basketball Sports Running',
+          'Modern Lady Sneakers',
+          'Elegant High Heels',
+        ],
+      },
+      {
+        name: 'WEARABLE',
+        list: [
+          'Beige - Fashion',
+          'Tasha Plaid Dressy High Rise',
+          'Plaid Tana Coat',
+          'Jodhpur cuff at the ankles',
+          'Black Overshirt Dress',
+          'Woman Flatform Sandals',
+        ],
+      },
+      {
+        name: 'FASHION',
+        list: [
+          'Beige - Fashion',
+          'Best Handbag For Woman',
+          'Bolsa transverse handbag',
+          'Cross Body Soft Glam Black',
+          'Vintage evening bag',
+          'Moleskine Coloured Hard Cover',
+        ],
+      },
+      {
+        name: 'MEN',
+        list: [
+          'Beige - Fashion',
+          'Athletic Apparel Sweatshirts',
+          'Classic Men′s Business Suit',
+          'Cotton Fitness Training Hoodie',
+          'Factory Custom V-Neck T Shirts',
+          'Ladies slub stretch jeans',
+        ],
+      },
+    ],
   },
   {
-    img: "/2news.jpeg",
-    title: "News & Annoucement",
     id: 2,
-  },
-  {
-    img: "/3marketnews.jpeg",
-    title: "Directories",
-    id: 2,
-  },
-  {
-    img: "/4directories.jpeg",
-    title: "Open For Comment",
-    id: 2,
-  },
-  {
-    img: "/5reports.jpeg",
-    title: "Open For Comment",
-    id: 2,
-  },
-  {
-    img: "/6comments.jpeg",
-    title: "Open For Comment",
-    id: 2,
-  },
-];
-
-export const dataProgram = [
-  {
-    img: "/TM.jpeg",
-    title: "Science & technology",
-    id: 2,
-  },
-  {
-    img: "/CP2.jpeg",
-    title: "Commodity Procurement",
-    id: 1,
-  },
-  {
-    img: "/C&T.jpeg",
-    title: "Cotton & Tobacco",
-    id: 2,
-  },
-  {
-    img: "/TM.jpeg",
-    title: "Transportation & marketing",
-    id: 2,
-  },
-
-  {
-    img: "/FTPP.jpeg",
-    title: "fair trade practices",
-    id: 2,
-  },
-  {
-    img: "/FGIS.jpeg",
-    title: "federal grain inspection",
-    id: 2,
-  },
-  {
-    img: "/homepage_programs_lp.png",
-    title: "Livestock & poultry",
-    id: 2,
-  },
-  {
-    img: "/NOP.jpeg",
-    title: "National organic program",
-    id: 2,
-  },
-  {
-    img: "/dairy.jpeg",
-    title: "Diary",
-    id: 2,
-  },
-
-  {
-    img: "/S&T.jpeg",
-    title: "Science & technology",
-    id: 2,
+    title: 'PAGES',
+    step: 1,
+    description: [
+      {
+        name: '',
+        list: ['About Us', 'Blogs', 'Contact Us', 'Terms and Conditions'],
+      },
+    ],
   },
 ];
