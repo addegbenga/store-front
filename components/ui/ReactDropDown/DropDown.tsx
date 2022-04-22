@@ -22,7 +22,7 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
       {categories.map((category, index) => (
         <div key={category.id}>
           <div className="border-b py-3">
-            <div className="flex px-4 text-[0.9rem] justify-between items-center">
+            <div className="flex px-4 text-[0.95rem] justify-between items-center">
               <h1 key={index}>{category.title}</h1>
               <button
                 className={`${isOpenArrayState.map(() =>
