@@ -33,7 +33,7 @@ const LoginView: React.FC<ILoginProps> = () => {
                 placeholder="Your password*"
               />
             </div>
-            <button className="w-full bg-[#b99d6b] text-white text-center border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border ">
+            <button className="w-full  text-[#b99d6b] text-center border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border ">
               LOGIN ACCOUNT
             </button>
             <p className=" text-center">or</p>
