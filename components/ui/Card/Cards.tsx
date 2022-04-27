@@ -28,8 +28,6 @@ const Cards: React.FC<ICardsProps> = ({
             layout={layoutProps}
             alt={imgProp}
             src={imgSrc}
-            height={100}
-            width={100}
             objectFit="cover"
             objectPosition="center"
           />

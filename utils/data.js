@@ -73,3 +73,54 @@ export const dataCategory = [
     ],
   },
 ];
+
+export const productData = [
+  {
+    img: '/assets/product1.webp',
+    title: 'Soft Soafers',
+    price: '145.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product3.webp',
+    title: 'Athletic Apparel Sweatshirts',
+    price: '50.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product3.webp',
+    title: 'Best Handbag For Woman',
+    price: '75.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product4.webp',
+    title: 'Soft Soafers',
+    price: '45.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product1.webp',
+    title: 'Adalle Lace Long Dress',
+    price: '90.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product1.webp',
+    title: 'Soft Soafers',
+    price: '14.0',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product1.webp',
+    title: 'Soft Soafers',
+    price: '15.00',
+    desc: 'Nice and very soft soafers',
+  },
+  {
+    img: '/assets/product1.webp',
+    title: 'Bottega Veneta - Clutch Pouch 20 de Couro',
+    price: '100.00',
+    desc: 'Nice and very soft soafers',
+  },
+];

@@ -5,7 +5,7 @@ const TopNavbar: React.FC<ITopNavProps> = () => {
   return (
     <div>
       <div className="bg-[#b99d6b]">
-        <div className="flex 2xl:container p-2 px-4 md:px-10 mx-auto justify-between">
+        <div className="flex container 2xl:container p-2 px-4 md:px-10 mx-auto justify-between">
           <div className="flex gap-20 text-white text-sm">
             <Link href="/">Login</Link>
             {/* <h1 className="hidden md:block">Wishlist</h1> */}
