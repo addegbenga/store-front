@@ -1,6 +1,5 @@
 import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { FaTimes } from 'react-icons/fa';
 import { Fragment } from 'react';
 import ReactDropDown from '@/components/ui/ReactDropDown';
 import { dataCategory } from 'utils/data';
