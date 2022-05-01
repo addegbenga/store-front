@@ -16,8 +16,8 @@ const index: React.FC = () => {
         </h1>
         <div className="flex flex-col gap-1">
           <h1 className="text-xs font-semibold">SIZE:</h1>
-          <div>
-            <select className="border w-full p-2" name="cars" id="cars">
+          <div className="border">
+            <select className=" w-full p-3" name="cars" id="cars">
               <option value="none" selected disabled hidden>
                 Please an input
               </option>
@@ -28,14 +28,14 @@ const index: React.FC = () => {
           </div>
         </div>
         <div className="w-full flex gap-2 ">
-          <button className="bg-green-700 w-full text-white p-1 px-3">
+          <button className="bg-green-700 w-full text-white p-2 px-3">
             ADD TO BAG
           </button>
-          <button className="bg-gray-100 rounded-full p-2  flex justify-center items-center">
+          <button className="bg-gray-100 rounded-full p-2 w-10 h-10  flex justify-center items-center">
             <AiOutlineHeart className="text-xl" />
           </button>
         </div>
-        <div className="border border-opacity-20 border-gray-600 pb-12 p-1.5 ">
+        <div className="border border-opacity-20 border-gray-600 pb-12 p-2.5 ">
           <p className="text-xs">Free Delivery:</p>
           <span className="text-xs">
             Ts&Cs apply. <span className="text-xs underline">Learn more</span>

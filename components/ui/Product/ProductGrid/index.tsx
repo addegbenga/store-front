@@ -15,7 +15,7 @@ const index: React.FC<IProductGridProps> = () => {
       <Filterbar />
       <div>
         {/* Todo: sort and toggle switcher on mobile create a separate component for it */}
-        <div className="flex md:hidden bg-gray-100 p-2 border-b  items-center ">
+        <div className="flex md:hidden bg-gray-100 p-4 border-b  items-center ">
           <button className="bg-gray-100 w-full text-sm text-gray-500 font-semibold">
             Sort
           </button>
