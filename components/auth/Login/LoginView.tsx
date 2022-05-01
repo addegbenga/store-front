@@ -4,8 +4,8 @@ export interface ILoginProps {}
 
 const LoginView: React.FC<ILoginProps> = () => {
   return (
-    <div className=" flex ">
-      <div className=" w-full md:w-5/6 md:pr-10 mt-10 px-4">
+    <div className=" flex container mx-auto ">
+      <div className=" w-full mt-10 px-4">
         <div className="flex gap-2 items-center">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Login Account</h1>

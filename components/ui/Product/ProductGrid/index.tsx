@@ -8,15 +8,16 @@ interface IProductGridProps {
   className?: string;
 }
 
-const index: React.FC<IProductGridProps> = () => {
+const index: React.FC<IProductGridProps> = ({ props }: any) => {
+  console.log(productData);
   return (
     <div>
       <Filterbar />
       <div>
         <div className="grid grid-cols-4  my-14 container  mx-auto">
-          {productData.map((item, index) => (
+          {productData.map((item: any, index: any) => (
             <ProductCard
-              desc={item.title}
+              title={item.title}
               price={item.price}
               imgSrc={item.img}
               key={index}
@@ -27,4 +28,17 @@ const index: React.FC<IProductGridProps> = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+
+  // By returning { props: { posts } }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      productData,
+    },
+  };
+}
 export default index;

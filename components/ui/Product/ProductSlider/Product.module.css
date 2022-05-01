@@ -1,0 +1,57 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply flex h-20;
+  }
+
+  /* [class^='number-slide'],
+[class*=' number-slide'] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 200px;
+  max-height: 100vh;
+} */
+
+  .number-slide1 {
+    @apply bg-red-200;
+  }
+
+  .number-slide2 {
+    @apply bg-green-200;
+  }
+
+  .number-slide3 {
+    @apply bg-yellow-200;
+  }
+
+  .number-slide4 {
+    @apply bg-gray-400;
+  }
+
+  .number-slide5 {
+    @apply bg-gray-700;
+  }
+
+  .number-slide6 {
+    @apply bg-pink-400;
+  }
+
+  .thumbnail .keen-slider__slide {
+    font-size: 30px;
+    margin-top: 10px;
+    height: 100px;
+  }
+  .thumbnail .keen-slider__slide {
+    cursor: pointer;
+  }
+  .thumbnail .keen-slider__slide.active {
+    border: 2px dashed black;
+  }
+}

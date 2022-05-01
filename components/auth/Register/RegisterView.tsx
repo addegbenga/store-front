@@ -4,8 +4,8 @@ interface IRegisterProps {}
 
 const RegisterView: React.FC<IRegisterProps> = () => {
   return (
-    <div className=" flex ">
-      <div className="w-full md:w-5/6 md:pr-10 mt-10 px-4">
+    <div className=" flex container mx-auto ">
+      <div className="w-full  mt-10 px-4">
         <div className="flex gap-2 items-center">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Create Account</h1>
@@ -13,10 +13,10 @@ const RegisterView: React.FC<IRegisterProps> = () => {
         <p className="text-gray-400 pt-2">
           Get in touch and let us know how we can help.
         </p>
-        <div className="my-20">
+        <div className="py-16">
           <form className="grid gap-4">
             <div>
-              <h1 className="text-sm mb-1.5">First Name</h1>
+              <h1 className="text-sm mb-1.5">FullName</h1>
               <input
                 className="border md:p-2.5  w-full p-1.5 pl-3"
                 type="text"
@@ -24,15 +24,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
                 placeholder="First Name"
               />
             </div>
-            <div>
-              <h1 className="text-sm mb-1.5">Last Name</h1>
-              <input
-                className="border md:p-2.5   w-full p-1.5 pl-3"
-                type="text"
-                name="lastname"
-                placeholder="Last Name"
-              />
-            </div>
+
             <div>
               <h1 className="text-sm mb-1.5">Email</h1>
               <input
@@ -72,7 +64,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           </form>
         </div>
       </div>
-      <div className="w-full -mt-[2.3rem] hidden md:block  ">
+      <div className="w-full  hidden md:block  ">
         <Image
           objectPosition=" 20% 10%"
           src="/assets/registerbanner.jpg"
