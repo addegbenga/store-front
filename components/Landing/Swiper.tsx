@@ -90,9 +90,11 @@ const MySwiper = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -124,9 +126,11 @@ const MySwiper = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -182,9 +186,11 @@ const MySwiper1 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -216,9 +222,11 @@ const MySwiper1 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -250,9 +258,11 @@ const MySwiper1 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -309,9 +319,11 @@ const MySwiper2 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -343,9 +355,11 @@ const MySwiper2 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -377,9 +391,11 @@ const MySwiper2 = () => {
                 <h1 className="md:text-2xl text-sm text-center">
                   NEW STYLES JUST LANDED
                 </h1>
-                <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
-                  TAKE A LOOK
-                </button>
+                <Link passHref={true} href="/collections/wearable">
+                  <button className="bg-[#b99d6b] text-sm md:text-base w-11/12 p-2">
+                    TAKE A LOOK
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
