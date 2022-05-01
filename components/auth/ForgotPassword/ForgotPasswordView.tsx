@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 export interface ILoginProps {}
 
 const ForgotPassowordView: React.FC<ILoginProps> = () => {
   return (
     <div className=" flex container mx-auto ">
-      <div className=" w-full  mt-10 px-4">
+      <div className=" w-1/2  mt-10 px-4">
         <div className="flex gap-2 items-center">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Reset your password</h1>
@@ -43,7 +42,7 @@ const ForgotPassowordView: React.FC<ILoginProps> = () => {
           </form>
         </div>
       </div>
-      <div className="w-full -mt-[2.3rem] hidden md:block  overflow-hidden">
+      {/* <div className="w-full -mt-[2.3rem] hidden md:block  overflow-hidden">
         <Image
           objectPosition=" 20% 10%"
           src="/assets/registerbanner.jpg"
@@ -52,7 +51,7 @@ const ForgotPassowordView: React.FC<ILoginProps> = () => {
           width="100%"
           layout="responsive"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

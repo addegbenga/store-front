@@ -5,7 +5,7 @@ interface IRegisterProps {}
 const RegisterView: React.FC<IRegisterProps> = () => {
   return (
     <div className=" flex container mx-auto ">
-      <div className="w-full  mt-10 px-4">
+      <div className="w-1/2 mt-10 px-4">
         <div className="flex gap-2 items-center">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Create Account</h1>
@@ -64,7 +64,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           </form>
         </div>
       </div>
-      <div className="w-full  hidden md:block  ">
+      {/* <div className="w-full  hidden md:block  ">
         <Image
           objectPosition=" 20% 10%"
           src="/assets/registerbanner.jpg"
@@ -73,7 +73,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           width="100%"
           layout="responsive"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

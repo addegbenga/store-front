@@ -18,10 +18,10 @@ const Navbar: React.FC<INavProps> = () => {
       <Sidebar handleCloseModal={handleCloseModal} isOpen={open} />
 
       <div>
-        <div className="bg-white  md:py-12 py-6  border-b border-black border-opacity-5">
+        <div className="bg-white  md:py-9 py-6  border-b border-black border-opacity-5">
           <div className="flex container 2xl:container px-4 mx-auto justify-between items-center">
-            <h1 className="font-bold">ASOS</h1>
-            <div className="hidden md:flex  gap-10 text-xs">
+            <h1 className="font-bold text-2xl ">ASOS</h1>
+            <div className="hidden text-medium  md:flex  gap-10 text-xs">
               <h1>SKINS</h1>
               <h1>FEATURES</h1>
               <h1>FASHION</h1>
@@ -36,9 +36,9 @@ const Navbar: React.FC<INavProps> = () => {
               />
               <AiOutlineSearch />
             </div>
-            <div className="md:flex gap-2 items-center hidden ">
+            <div className="md:flex gap-2  items-center hidden ">
               <input
-                className="bg-transparent text-sm outline-none placeholder-black"
+                className="bg-transparent border-b border-black text-sm outline-none placeholder-black"
                 type="text"
                 placeholder="Search our store"
               />

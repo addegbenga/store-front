@@ -8,7 +8,7 @@ interface IProductGridProps {
   className?: string;
 }
 
-const index: React.FC<IProductGridProps> = ({ props }: any) => {
+const index: React.FC<IProductGridProps> = () => {
   console.log(productData);
   return (
     <div>
@@ -29,16 +29,4 @@ const index: React.FC<IProductGridProps> = ({ props }: any) => {
   );
 };
 
-export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      productData,
-    },
-  };
-}
 export default index;

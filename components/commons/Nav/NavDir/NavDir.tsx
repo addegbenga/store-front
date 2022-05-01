@@ -1,10 +1,23 @@
+import { BiChevronRight } from 'react-icons/bi';
+
 interface INavDirProps {}
 
 const NavDir: React.FC<INavDirProps> = () => {
   return (
-    <div className="bg-[#b99d6b]">
-      <div className=" border-dashed container mx-auto bg-[#b99d6b] relative z-20  border-b border-[#b99d6b] border-opacity-30 text-white py-2 px-4 text-sm">
-        Home &gt; create account{' '}
+    <div className="bg-[#eeeeee] border-y border-black border-opacity-10 ">
+      <div className="  container mx-auto flex items-center gap-4   relative z-20  text-black py-2 px-4 text-sm">
+        <div className="flex items-center gap-2">
+          <p>Home</p>
+          <BiChevronRight />
+        </div>
+        <div className="flex items-center gap-2">
+          <p>Create Account</p>
+          <BiChevronRight />
+        </div>
+        <div className="flex items-center gap-2">
+          <p>Sales Top</p>
+          <BiChevronRight />
+        </div>
       </div>
     </div>
   );
