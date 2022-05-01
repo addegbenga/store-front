@@ -18,7 +18,7 @@ const index: React.FC = () => {
           <h1 className="text-xs font-semibold">SIZE:</h1>
           <div className="border h-12 flex items-center">
             <select
-              className=" w-full outline-none border-none "
+              className=" w-full p-2 outline-none border-none bg-none "
               name="cars"
               id="cars"
             >
@@ -31,11 +31,11 @@ const index: React.FC = () => {
             </select>
           </div>
         </div>
-        <div className="w-full flex gap-2 ">
-          <button className="bg-green-700 w-full text-white p-2 px-3">
+        <div className="w-full flex gap-2 items-center ">
+          <button className="bg-green-700 w-full text-white p-4 px-3">
             ADD TO BAG
           </button>
-          <button className="bg-gray-100 rounded-full p-2 w-10 h-10  flex justify-center items-center">
+          <button className="bg-gray-100 rounded-full p-4 w-14 h-104  flex justify-center items-center">
             <AiOutlineHeart className="text-xl" />
           </button>
         </div>
