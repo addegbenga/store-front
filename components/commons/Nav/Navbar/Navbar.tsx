@@ -18,7 +18,7 @@ const Navbar: React.FC<INavProps> = () => {
       <Sidebar handleCloseModal={handleCloseModal} isOpen={open} />
 
       <div>
-        <div className="bg-white fixed top-0 md:top-9 w-full z-20  md:py-9 py-6  border-b border-black border-opacity-5">
+        <div className="bg-white sticky top-0 md:top-9 w-full z-20  md:py-9 py-6  border-b border-black border-opacity-5">
           <div className="flex container 2xl:container px-4 mx-auto justify-between items-center">
             <h1 className="font-bold text-2xl ">KARA</h1>
             <div className="hidden text-medium  md:flex  gap-10 text-xs">
