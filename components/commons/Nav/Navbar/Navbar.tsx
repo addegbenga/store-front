@@ -20,7 +20,7 @@ const Navbar: React.FC<INavProps> = () => {
       <div>
         <div className="bg-white  md:py-9 py-6  border-b border-black border-opacity-5">
           <div className="flex container 2xl:container px-4 mx-auto justify-between items-center">
-            <h1 className="font-bold text-2xl ">ASOS</h1>
+            <h1 className="font-bold text-2xl ">KARA</h1>
             <div className="hidden text-medium  md:flex  gap-10 text-xs">
               <h1>SKINS</h1>
               <h1>FEATURES</h1>

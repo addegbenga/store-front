@@ -5,7 +5,7 @@ interface IFilterbarProps {}
 
 const Index: React.FC<IFilterbarProps> = () => {
   return (
-    <div className="flex gap-10  py-7 border-b  items-center">
+    <div className=" gap-10 hidden lg:flex  py-7 border-b  items-center">
       <div className="flex gap-10 max-w-5xl mx-auto items-center w-full  justify-evenly ">
         <Sort title="Alphabetically, A-Z" open={false}>
           <HiChevronDown />

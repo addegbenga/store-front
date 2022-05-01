@@ -77,7 +77,7 @@ export const dataCategory = [
 export const productData = [
   {
     img: '/assets/product1.webp',
-    title: 'Soft Soafers',
+    title: 'Soft Soafers with great custom',
     price: '145.0',
     desc: 'Nice and very soft soafers',
   },
@@ -95,7 +95,7 @@ export const productData = [
   },
   {
     img: '/assets/product4.webp',
-    title: 'Soft Soafers',
+    title: 'Soft Soafers with very great cutom',
     price: '45.0',
     desc: 'Nice and very soft soafers',
   },
@@ -107,13 +107,13 @@ export const productData = [
   },
   {
     img: '/assets/product1.webp',
-    title: 'Soft Soafers',
+    title: 'Soft Soafers nice and soft ',
     price: '14.0',
     desc: 'Nice and very soft soafers',
   },
   {
     img: '/assets/product1.webp',
-    title: 'Soft Soafers',
+    title: 'Soft Soafers i need more of this',
     price: '15.00',
     desc: 'Nice and very soft soafers',
   },

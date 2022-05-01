@@ -38,9 +38,9 @@ export default function Index() {
   });
 
   return (
-    <div className="w-[35rem] gap-3 flex h-[43rem]  ">
+    <div className="lg:w-[35rem] h-[27rem] lg:gap-3 flex lg:h-[43rem]  ">
       {/* slider thumbnail start */}
-      <div className=" flex flex-col gap-5 my-4">
+      <div className="  hidden lg:flex flex-col gap-5 my-4">
         {productImage.map((item, index) => (
           <div key={item.id}>
             <div
@@ -67,7 +67,7 @@ export default function Index() {
             onClick={(e: any) =>
               e.stopPropagation() || instanceRef.current?.prev()
             }
-            className="absolute text-black  z-10"
+            className="absolute hidden lg:block  text-black  z-10"
           >
             <BsChevronLeft className="text-4xl" />
           </button>
@@ -82,7 +82,7 @@ export default function Index() {
             onClick={(e: any) =>
               e.stopPropagation() || instanceRef.current?.next()
             }
-            className="absolute text-black right-0  z-10"
+            className="absolute hidden lg:block text-black right-0  z-10"
           >
             {' '}
             <BsChevronRight className="text-4xl" />

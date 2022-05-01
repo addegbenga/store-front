@@ -3,11 +3,12 @@ import { AiOutlineHeart } from 'react-icons/ai';
 
 const index: React.FC = () => {
   return (
-    <div className="container mx-auto  justify-center gap-12 flex  ">
+    <div className="container mx-auto  justify-center lg:gap-12 flex flex-col lg:flex-row  ">
       <ProductSlider />
-      <div className="max-w-sm my-8 flex flex-col gap-4">
-        <h1 className="text-xl">
-          ASOS DESIGN boxy oversized revere shirt in lilac
+      <div className="max-w-sm mx-2 lg:mx-0 my-4 lg:my-4  flex flex-col gap-4">
+        <h1 className="text-xl font-normal">
+          Polo Ralph Lauren x ASOS exclusive collab rugby polo shirt with chest
+          circle logo in vertical stripe
         </h1>
         <h2 className="font-medium text-lg text-gray-600">£24.00</h2>
         <h1 className="text-xs font-semibold">
