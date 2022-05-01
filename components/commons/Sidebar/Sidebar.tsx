@@ -37,22 +37,6 @@ const Sidebar: React.FC<ISidebarProps> = ({ isOpen, handleCloseModal }) => {
             >
               &#8203;
             </span>
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0  scale-75 transform "
-              enterTo="opacity-100 scale-100"
-              leave="ease-in duration-200"
-              leaveFrom="opacity-100 scale-100"
-              leaveTo="  scale-75  transform"
-            >
-              <button
-                onClick={handleCloseModal}
-                className=" z-20 transform ease-out duration-100 delay-200 absolute bg-white flex items-center justify-center rounded-full z-50 right-12 h-10 w-10  top-4"
-              >
-                <FaTimes />
-              </button>
-            </Transition.Child>
 
             <Transition.Child
               as={Fragment}

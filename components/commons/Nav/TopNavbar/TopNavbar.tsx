@@ -4,7 +4,7 @@ interface ITopNavProps {}
 const TopNavbar: React.FC<ITopNavProps> = () => {
   return (
     <div>
-      <div className="bg-[#2d2d2d]">
+      <div className="bg-[#2d2d2d] hidden md:block">
         <div className="flex container 2xl:container p-2 px-4 md:px-10 mx-auto justify-between">
           <div className="flex gap-20 font-medium text-white text-sm">
             <Link href="/">Login</Link>
