@@ -16,8 +16,12 @@ const index: React.FC = () => {
         </h1>
         <div className="flex flex-col gap-1">
           <h1 className="text-xs font-semibold">SIZE:</h1>
-          <div className="border">
-            <select className=" w-full p-3" name="cars" id="cars">
+          <div className="border h-12 flex items-center">
+            <select
+              className=" w-full outline-none border-none "
+              name="cars"
+              id="cars"
+            >
               <option value="none" selected disabled hidden>
                 Please an input
               </option>
