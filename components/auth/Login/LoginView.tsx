@@ -51,16 +51,6 @@ const LoginView: React.FC<ILoginProps> = () => {
           </form>
         </div>
       </div>
-      {/* <div className="w-full -mt-[2.3rem] hidden md:block  overflow-hidden">
-        <Image
-          objectPosition=" 20% 10%"
-          src="/assets/login.svg"
-          height="100%"
-          alt="banner"
-          width="100%"
-          layout="responsive"
-        />
-      </div> */}
     </div>
   );
 };

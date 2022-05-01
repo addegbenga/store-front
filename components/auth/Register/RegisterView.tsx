@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 interface IRegisterProps {}
 
@@ -64,16 +63,6 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           </form>
         </div>
       </div>
-      {/* <div className="w-full  hidden md:block  ">
-        <Image
-          objectPosition=" 20% 10%"
-          src="/assets/registerbanner.jpg"
-          height="100%"
-          alt="banner"
-          width="100%"
-          layout="responsive"
-        />
-      </div> */}
     </div>
   );
 };
