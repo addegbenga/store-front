@@ -25,7 +25,7 @@ const index: React.FC<IProductGridProps> = () => {
           </button>
         </div>
         {/* Todo: sort and toggle switcher on mobile create a separate component for it */}
-        <div className="grid gap-4 px-2 lg:px-0 lg:gap-0 grid-cols-2 lg:grid-cols-4  my-14 container  mx-auto">
+        <div className="grid gap-2 px-2 lg:px-0 lg:gap-10 grid-cols-2 lg:grid-cols-4  my-14 container  mx-auto">
           {productData.map((item: any, index: any) => (
             <ProductCard
               title={item.title}

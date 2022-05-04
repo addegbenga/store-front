@@ -1,4 +1,5 @@
 import ProductSlider from '../ProductSlider';
+import Button from '../../Button';
 import { AiOutlineHeart } from 'react-icons/ai';
 
 const index: React.FC = () => {
@@ -32,9 +33,12 @@ const index: React.FC = () => {
           </div>
         </div>
         <div className="w-full flex gap-2 items-center ">
-          <button className="bg-green-700 w-full text-white p-4 px-3">
+          <Button
+            className="bg-green-700 w-full justify-center flex items-center text-white p-4 px-3"
+            Component="button"
+          >
             ADD TO BAG
-          </button>
+          </Button>
           <button className="bg-gray-100 rounded-full p-4 w-14 h-104  flex justify-center items-center">
             <AiOutlineHeart className="text-xl" />
           </button>
