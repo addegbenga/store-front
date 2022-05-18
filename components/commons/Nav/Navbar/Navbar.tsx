@@ -2,6 +2,7 @@ import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 import Sidebar from '../../Sidebar';
 import { AiOutlineSearch } from 'react-icons/ai';
+import Link from 'next/link';
 interface INavProps {}
 
 const Navbar: React.FC<INavProps> = () => {
@@ -20,7 +21,10 @@ const Navbar: React.FC<INavProps> = () => {
       <div>
         <div className="bg-white sticky top-0 md:top-9 w-full z-20  md:py-9 py-6  border-b border-black border-opacity-5">
           <div className="flex container 2xl:container px-4 mx-auto justify-between items-center">
-            <h1 className="font-bold text-2xl ">KARA</h1>
+            <Link passHref={true} href="/">
+              <h1 className="font-bold cursor-pointer text-2xl ">KARA</h1>
+            </Link>
+
             <div className="hidden text-medium  md:flex  gap-10 text-xs">
               <h1>SKINS</h1>
               <h1>FEATURES</h1>
