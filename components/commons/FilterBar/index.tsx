@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Sort from '@/components/ui/Sort/Sort';
 import { HiChevronDown } from 'react-icons/hi';
 import { FaTimes } from 'react-icons/fa';
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 interface IFilterbarProps {}
 
@@ -22,8 +24,8 @@ const Index: React.FC<IFilterbarProps> = () => {
     });
   };
   return (
-    <div className=" gap-10 hidden lg:flex  py-7 border-b  items-center">
-      <div className="flex gap-10 max-w-5xl mx-auto items-center w-full  justify-evenly ">
+    <div className=" gap-10 hidden lg:flex  py-7 border-b  items-center relative">
+      <div className="flex gap-10 max-w-5xl mx-auto items-center relative w-full  justify-evenly ">
         {/* drop down for filtering */}
         <div className=" relative z-10 px-8 ">
           <Sort title="Alphabetically, A-Z">
@@ -61,27 +63,72 @@ const Index: React.FC<IFilterbarProps> = () => {
         </div>
         {/* drop down for filtering */}
 
-        <Sort title="Filter">
-          <>
-            <svg
-              onClick={() => handleOpenFilterModal({ filterProp: true })}
-              className="icon-svg icon-filter w-4 h-4"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlnsXlink="http://www.w3.org/1999/xlink"
-              viewBox="0 0 20 15"
-            >
-              <path
-                fillRule="evenodd"
-                d="M7.304,2.040 C6.977,0.854 6.057,-0.003 4.976,-0.003 C3.895,-0.003 2.975,0.854 2.648,2.040 C0.789,2.040 0.789,2.040 0.789,2.040 C0.357,2.040 0.007,2.467 0.007,2.993 C0.007,3.520 0.357,3.947 0.789,3.947 C2.648,3.947 2.648,3.947 2.648,3.947 C2.975,5.133 3.895,5.990 4.976,5.990 C6.057,5.990 6.977,5.133 7.304,3.947 C19.211,3.947 19.211,3.947 19.211,3.947 C19.643,3.947 19.993,3.520 19.993,2.993 C19.993,2.467 19.643,2.040 19.211,2.040 L7.304,2.040 ZM4.083,2.993 C4.083,2.393 4.484,1.904 4.976,1.904 C5.468,1.904 5.869,2.393 5.869,2.993 C5.869,3.594 5.468,4.083 4.976,4.083 C4.484,4.083 4.083,3.594 4.083,2.993 ZM10.653,11.052 C10.326,9.866 9.406,9.009 8.325,9.009 C7.244,9.009 6.324,9.866 5.997,11.052 C0.789,11.052 0.789,11.052 0.789,11.052 C0.357,11.052 0.007,11.479 0.007,12.006 C0.007,12.532 0.357,12.959 0.789,12.959 C5.997,12.959 5.997,12.959 5.997,12.959 C6.324,14.146 7.244,15.002 8.325,15.002 C9.406,15.002 10.326,14.146 10.653,12.959 C19.211,12.959 19.211,12.959 19.211,12.959 C19.643,12.959 19.993,12.532 19.993,12.006 C19.993,11.479 19.643,11.052 19.211,11.052 L10.653,11.052 ZM7.432,12.006 C7.432,11.405 7.833,10.916 8.325,10.916 C8.818,10.916 9.218,11.405 9.218,12.006 C9.218,12.606 8.818,13.095 8.325,13.095 C7.833,13.095 7.432,12.606 7.432,12.006 Z"
-              ></path>
-            </svg>
-            {filterModalOpen.filter && (
-              <div>
-                <h1>Hello world</h1>
-              </div>
-            )}
-          </>
-        </Sort>
+        <div>
+          <Sort title="Filter">
+            <>
+              <svg
+                onClick={() => handleOpenFilterModal({ filterProp: true })}
+                className="icon-svg icon-filter cursor-pointer w-4 h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 20 15"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M7.304,2.040 C6.977,0.854 6.057,-0.003 4.976,-0.003 C3.895,-0.003 2.975,0.854 2.648,2.040 C0.789,2.040 0.789,2.040 0.789,2.040 C0.357,2.040 0.007,2.467 0.007,2.993 C0.007,3.520 0.357,3.947 0.789,3.947 C2.648,3.947 2.648,3.947 2.648,3.947 C2.975,5.133 3.895,5.990 4.976,5.990 C6.057,5.990 6.977,5.133 7.304,3.947 C19.211,3.947 19.211,3.947 19.211,3.947 C19.643,3.947 19.993,3.520 19.993,2.993 C19.993,2.467 19.643,2.040 19.211,2.040 L7.304,2.040 ZM4.083,2.993 C4.083,2.393 4.484,1.904 4.976,1.904 C5.468,1.904 5.869,2.393 5.869,2.993 C5.869,3.594 5.468,4.083 4.976,4.083 C4.484,4.083 4.083,3.594 4.083,2.993 ZM10.653,11.052 C10.326,9.866 9.406,9.009 8.325,9.009 C7.244,9.009 6.324,9.866 5.997,11.052 C0.789,11.052 0.789,11.052 0.789,11.052 C0.357,11.052 0.007,11.479 0.007,12.006 C0.007,12.532 0.357,12.959 0.789,12.959 C5.997,12.959 5.997,12.959 5.997,12.959 C6.324,14.146 7.244,15.002 8.325,15.002 C9.406,15.002 10.326,14.146 10.653,12.959 C19.211,12.959 19.211,12.959 19.211,12.959 C19.643,12.959 19.993,12.532 19.993,12.006 C19.993,11.479 19.643,11.052 19.211,11.052 L10.653,11.052 ZM7.432,12.006 C7.432,11.405 7.833,10.916 8.325,10.916 C8.818,10.916 9.218,11.405 9.218,12.006 C9.218,12.606 8.818,13.095 8.325,13.095 C7.833,13.095 7.432,12.606 7.432,12.006 Z"
+                ></path>
+              </svg>
+              {filterModalOpen.filter && (
+                <div className="bg-gray-100  shadow-xl  z-10 p-5 absolute left-0 w-full top-11">
+                  <div className="grid grid-cols-3  gap-2">
+                    <div className="border text-sm bg-gray-100  shadow-2xl p-2">
+                      <h1>Category</h1>
+                      <div className="mt-5 grid gap-1">
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (47)
+                        </h1>
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (20)
+                        </h1>
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (10)
+                        </h1>
+                      </div>
+                    </div>
+
+                    <div className="border text-sm bg-gray-100  shadow-2xl p-2">
+                      <h1>Category</h1>
+                      <div className="mt-5 grid gap-1">
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (47)
+                        </h1>
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (20)
+                        </h1>
+                        <h1 className="bg-white py-2 px-2 rounded cursor-pointer">
+                          Shoes (10)
+                        </h1>
+                      </div>
+                    </div>
+                    <div className="bg-gray-100  shadow-2xl h-fit p-2 border   ">
+                      <div className="flex flex-col pb-2 text-sm border-b border-green-700 border-opacity-30">
+                        <h1>Price Range Selected</h1>
+                        <span>£5 - £65</span>
+                      </div>
+                      <div className=" bg-white py-4 px-3 ">
+                        <div className="flex justify-between">
+                          <h1>£5</h1>
+                          <h1>£65</h1>
+                        </div>
+                        <Slider className="t-slider" range min={25} max={65} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </>
+          </Sort>
+        </div>
 
         <div className="flex gap-3">
           <svg
@@ -108,21 +155,23 @@ const Index: React.FC<IFilterbarProps> = () => {
             ></path>
           </svg>
         </div>
-        <Sort title="Show :">
-          <div>
-            <div className="flex items-center">
-              <p className="text-sm">16</p>
-              <div onClick={() => handleOpenFilterModal({ showProp: true })}>
-                <HiChevronDown />
+        <div>
+          <Sort title="Show :">
+            <div>
+              <div className="flex items-center">
+                <p className="text-sm">16</p>
+                <div onClick={() => handleOpenFilterModal({ showProp: true })}>
+                  <HiChevronDown />
+                </div>
               </div>
+              {filterModalOpen.show && (
+                <div className="bg-red-200">
+                  <h1>Hello world</h1>
+                </div>
+              )}
             </div>
-            {filterModalOpen.show && (
-              <div>
-                <h1>Hello world</h1>
-              </div>
-            )}
-          </div>
-        </Sort>
+          </Sort>
+        </div>
       </div>
     </div>
   );
