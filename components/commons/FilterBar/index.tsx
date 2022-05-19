@@ -7,20 +7,24 @@ import 'rc-slider/assets/index.css';
 
 interface IFilterbarProps {}
 
-const Index: React.FC<IFilterbarProps> = () => {
-  const [filterModalOpen, setIsFilterModalOpen] = useState<any>([
-    {
-      sorts: false,
-      filter: false,
-      show: false,
-    },
-  ]);
+interface IStateProps {
+  sorts?: boolean;
+  filter?: boolean;
+  show?: boolean;
+}
 
-  const handleOpenFilterModal = ({ sortsProp, filterProp, showProp }: any) => {
+const Index: React.FC<IFilterbarProps> = () => {
+  const [filterModalOpen, setIsFilterModalOpen] = useState<IStateProps>({
+    sorts: false,
+    filter: false,
+    show: false,
+  });
+
+  const handleOpenFilterModal = ({ sorts, filter, show }: IStateProps) => {
     setIsFilterModalOpen({
-      sorts: sortsProp && !filterModalOpen.sorts,
-      filter: filterProp && !filterModalOpen.filter,
-      show: showProp && !filterModalOpen.show,
+      sorts: sorts && !filterModalOpen.sorts,
+      filter: filter && !filterModalOpen.filter,
+      show: show && !filterModalOpen.show,
     });
   };
   return (
@@ -32,14 +36,14 @@ const Index: React.FC<IFilterbarProps> = () => {
             <div>
               <div
                 className="cursor-pointer"
-                onClick={() => handleOpenFilterModal({ sortsProp: true })}
+                onClick={() => handleOpenFilterModal({ sorts: true })}
               >
                 <HiChevronDown />
               </div>
               {filterModalOpen.sorts && (
                 <div>
                   <span
-                    onClick={() => handleOpenFilterModal({ sortsProp: true })}
+                    onClick={() => handleOpenFilterModal({ sorts: true })}
                     className="absolute z-10 top-2.5 right-2 cursor-pointer "
                   >
                     <FaTimes className="text-black text-opacity-50 text-sm" />
@@ -67,7 +71,7 @@ const Index: React.FC<IFilterbarProps> = () => {
           <Sort title="Filter">
             <>
               <svg
-                onClick={() => handleOpenFilterModal({ filterProp: true })}
+                onClick={() => handleOpenFilterModal({ filter: true })}
                 className="icon-svg icon-filter cursor-pointer w-4 h-4"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -160,7 +164,7 @@ const Index: React.FC<IFilterbarProps> = () => {
             <div>
               <div className="flex items-center">
                 <p className="text-sm">16</p>
-                <div onClick={() => handleOpenFilterModal({ showProp: true })}>
+                <div onClick={() => handleOpenFilterModal({ show: true })}>
                   <HiChevronDown />
                 </div>
               </div>
