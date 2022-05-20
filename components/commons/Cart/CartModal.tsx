@@ -51,7 +51,7 @@ const CartModal: React.FC<any> = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-3/12 w-full h-screen max-w-md p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl">
+                <Dialog.Panel className="w-3/12 h-screen max-w-md p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl">
                   <div className="my-2">
                     <h1 className="text-2xl">Shopping Cart</h1>
                     <p className="my-4 text-sm">
