@@ -4,9 +4,9 @@ interface ICheckOutProps {}
 const CheckOut: React.FC<ICheckOutProps> = () => {
   return (
     <div className="">
-      <div className="grid grid-cols-2 ">
+      <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 ">
         {/* shipping info section */}
-        <div className="w-full py-10 pl-32 pr-10 bg-white ">
+        <div className="w-full px-5 bg-white border-r lg:px-0 lg:py-10 lg:pl-32 lg:pr-10 ">
           <h1 className="text-2xl font-semibold">KARA</h1>
           <div className="flex gap-2 my-2 text-sm">
             <p>Information</p>
@@ -95,7 +95,7 @@ const CheckOut: React.FC<ICheckOutProps> = () => {
                   <p>Save this information for next time</p>
                 </div>
                 <div>
-                  <button className="p-4 px-5 text-sm text-white bg-blue-500 rounded">
+                  <button className="w-full p-4 px-5 text-sm text-white bg-blue-500 rounded lg:w-fit">
                     Continue to Shipping
                   </button>
                 </div>
@@ -104,7 +104,7 @@ const CheckOut: React.FC<ICheckOutProps> = () => {
           </div>
         </div>
         {/* end of shipping info section */}
-        <div className="h-screen py-10 bg-gray-100 ">
+        <div className="bg-gray-100 lg:h-screen lg:py-10 ">
           <div className="flex flex-col max-w-lg gap-2 mx-auto">
             <div className="flex items-center justify-between h-fit">
               <div className="flex items-center gap-4">
