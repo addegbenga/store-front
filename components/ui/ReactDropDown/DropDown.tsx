@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import removeWhiteSpace from 'functions/removeWhiteSpace';
 
 import { FaChevronDown } from 'react-icons/fa';
 
@@ -62,7 +63,7 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
                       <div>
                         {item.list.map((item, index) => (
                           <div key={index} className="text-[1rem] py-1 pl-2 ">
-                            <Link href={item.replace(/\s/g, '')}>{item}</Link>
+                            <Link href={removeWhiteSpace(item)}>{item}</Link>
                           </div>
                         ))}
                       </div>
