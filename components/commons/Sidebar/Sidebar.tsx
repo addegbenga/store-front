@@ -16,7 +16,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ isOpen, handleCloseModal }) => {
           className="fixed inset-0 z-20 overflow-y-auto"
           onClose={handleCloseModal}
         >
-          <div className="min-h-screen relative text-center">
+          <div className="relative min-h-screen text-center">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -26,7 +26,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ isOpen, handleCloseModal }) => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed bg-black bg-opacity-80 inset-0" />
+              <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-80" />
             </Transition.Child>
 
             {/* This element is to trick the browser into centering the modal contents. */}
@@ -46,7 +46,7 @@ const Sidebar: React.FC<ISidebarProps> = ({ isOpen, handleCloseModal }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="  -translate-x-44 transform"
             >
-              <div className="w-2/3 absolute top-0  h-screen    overflow-y-auto text-left transition-all transform bg-white shadow-xl ">
+              <div className="absolute top-0 w-2/3 h-screen overflow-y-auto text-left transition-all transform bg-white shadow-xl ">
                 <div className="mt-2 ">
                   <ReactDropDown categories={dataCategory} />
                 </div>

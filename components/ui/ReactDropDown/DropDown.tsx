@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { useState } from 'react';
+
 import { FaChevronDown } from 'react-icons/fa';
 
 type CategoryTypes = {
@@ -21,15 +23,15 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
     <div className="w-full mt-14 ">
       {categories.map((category, index) => (
         <div key={category.id}>
-          <div className="border-b py-3">
+          <div className="py-3 border-b">
             <div className="flex px-4 text-[0.95rem] justify-between items-center">
-              <h1 key={index}>{category.title}</h1>
+              <h1>{category.title}</h1>
               <button
                 className={`${isOpenArrayState.map(() =>
                   isOpenArrayState.includes(index)
-                    ? 'transform -rotate-180 ease-out transition duration-150 ease-in-out'
-                    : ' transform ease-out transition duration-150 ease-in-out'
-                )} transform ease-out transition duration-150 ease-in-out  `}
+                    ? 'transform -rotate-180 ease-out transition duration-150'
+                    : ' transform ease-out transition duration-150'
+                )} transform ease-out transition duration-150  `}
                 onClick={() =>
                   setOpenArrayState(
                     isOpenArrayState.includes(index)
@@ -42,7 +44,7 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
               </button>
             </div>
             {isOpenArrayState.includes(index) ? (
-              <div className="px-4 flex flex-col gap-2 mt-3">
+              <div className="flex flex-col gap-2 px-4 mt-3">
                 {category.description.map((item, index) =>
                   category.step === 2 ? (
                     <div key={index}>
@@ -59,9 +61,9 @@ const CategoryTabs: React.FC<CategoryTypes> = ({ categories }) => {
                     <div key={index}>
                       <div>
                         {item.list.map((item, index) => (
-                          <p key={index} className="text-[1rem] py-1 pl-2 ">
-                            {item}
-                          </p>
+                          <div key={index} className="text-[1rem] py-1 pl-2 ">
+                            <Link href={item.replace(/\s/g, '')}>{item}</Link>
+                          </div>
                         ))}
                       </div>
                     </div>
