@@ -3,13 +3,13 @@ interface IRegisterProps {}
 
 const RegisterView: React.FC<IRegisterProps> = () => {
   return (
-    <div className=" flex container mx-auto ">
-      <div className="w-1/2 mt-10 px-4">
-        <div className="flex gap-2 items-center">
+    <div className="container flex mx-auto ">
+      <div className="px-4 mt-10 lg:w-1/2">
+        <div className="flex items-center gap-2">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Create Account</h1>
         </div>
-        <p className="text-gray-400 pt-2">
+        <p className="pt-2 text-gray-400">
           Get in touch and let us know how we can help.
         </p>
         <div className="py-16">
@@ -48,8 +48,8 @@ const RegisterView: React.FC<IRegisterProps> = () => {
             </button>
 
             {/* <Button>CREATE ACCOUNT</Button> */}
-            <p className=" text-center">or</p>
-            <div className="flex gap-3 justify-center">
+            <p className="text-center ">or</p>
+            <div className="flex justify-center gap-3">
               <p className="text-[#b99d6b]">
                 {' '}
                 <Link href="/account/ForgotPassword">Forgot Password</Link>
