@@ -20,7 +20,7 @@
     @apply bg-red-100;
   }
   .loading {
-    @apply text-blue-300 cursor-not-allowed;
+    @apply text-white cursor-not-allowed;
   }
 
   .slim {
