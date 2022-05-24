@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]
 env:
-  NEXT_PUBLIC_FIREBASE_API_KEY: ${{ env.NEXT_PUBLIC_FIREBASE_API_KEY }}
+  NEXT_PUBLIC_FIREBASE_API_KEY: ${{ process.env.NEXT_PUBLIC_FIREBASE_API_KEY }}
 
 jobs:
   build:
