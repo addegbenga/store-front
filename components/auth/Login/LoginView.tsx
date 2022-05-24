@@ -4,7 +4,7 @@ export interface ILoginProps {}
 const LoginView: React.FC<ILoginProps> = () => {
   return (
     <div className="container flex mx-auto ">
-      <div className="px-4 mt-10  lg:w-1/2">
+      <div className="px-4 mt-10 lg:w-1/2">
         <div className="flex items-center gap-2">
           <div className="w-1 h-6 md:h-9  bg-[#b99d6b]"></div>
           <h1 className="text-2xl md:text-4xl">Login Account</h1>
@@ -32,7 +32,7 @@ const LoginView: React.FC<ILoginProps> = () => {
                 placeholder="Your password*"
               />
             </div>
-            <button className="w-full text-white text-center  bg-[#b99d6b] border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border ">
+            <button className="w-full text-white  bg-[#b99d6b] border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-center border ">
               LOGIN ACCOUNT
             </button>
             <p className="text-center ">or</p>
