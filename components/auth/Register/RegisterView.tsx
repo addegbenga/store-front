@@ -1,7 +1,40 @@
 import Link from 'next/link';
+import { useState } from 'react';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import Button from '@/components/ui/Button';
+import { auth } from '../../../firebase';
 interface IRegisterProps {}
-
+export type IStateInput = {
+  email: string;
+  password: string;
+};
 const RegisterView: React.FC<IRegisterProps> = () => {
+  const [loading, setLoading] = useState(false);
+  const [formValue, setFormValues] = useState<IStateInput>({
+    email: '',
+    password: '',
+  });
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
+    try {
+      e.preventDefault();
+      setLoading(true);
+      const result = await createUserWithEmailAndPassword(
+        auth,
+        formValue.email,
+        formValue.password
+      );
+      setLoading(false);
+      const user = result.user;
+      console.log(user);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    setFormValues({ ...formValue, [e.target.name]: e.target.value });
+  };
   return (
     <div className="container flex mx-auto ">
       <div className="px-4 mt-10 lg:w-1/2">
@@ -13,24 +46,16 @@ const RegisterView: React.FC<IRegisterProps> = () => {
           Get in touch and let us know how we can help.
         </p>
         <div className="py-16">
-          <form className="grid gap-4">
-            <div>
-              <h1 className="text-sm mb-1.5">FullName</h1>
-              <input
-                className="border md:p-2.5  w-full p-1.5 pl-3"
-                type="text"
-                name="firstname"
-                placeholder="First Name"
-              />
-            </div>
-
+          <form onSubmit={handleSubmit} className="grid gap-4">
             <div>
               <h1 className="text-sm mb-1.5">Email</h1>
               <input
                 className="border md:p-2.5  w-full p-1.5 pl-3"
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Your email*"
+                value={formValue.email}
+                onChange={(e) => handleChange(e)}
               />
             </div>
             <div>
@@ -40,12 +65,23 @@ const RegisterView: React.FC<IRegisterProps> = () => {
                 type="password"
                 name="password"
                 placeholder="Your password*"
+                value={formValue.password}
+                onChange={(e) => handleChange(e)}
               />
             </div>
 
-            <button className="w-full bg-[#b99d6b] text-white  border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-center border ">
+            {/* <button
+              type="submit"
+              className="w-full bg-[#b99d6b] text-white  border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-center border "
+            ></button> */}
+            <Button
+              type="submit"
+              loading={loading}
+              className="w-full bg-[#b99d6b] text-white  border-[#b99d6b] text-sm p-2 md:p-3 pl-3 flex items-center justify-center text-center border"
+            >
+              {' '}
               CREATE ACCOUNT
-            </button>
+            </Button>
 
             {/* <Button>CREATE ACCOUNT</Button> */}
             <p className="text-center ">or</p>

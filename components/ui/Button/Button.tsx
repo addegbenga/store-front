@@ -6,11 +6,12 @@ import React, {
   useRef,
 } from 'react';
 import mergeRefs from 'react-merge-refs';
+import { BiLoaderCircle } from 'react-icons/bi';
 import s from './Button.module.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
-  className?: string;
+  className: string;
   variant?: 'flat' | 'slim' | 'ghost' | 'naked';
   active?: boolean;
   type?: 'submit' | 'reset' | 'button';
@@ -37,11 +38,11 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
   const ref = useRef<typeof Component>(null);
 
   const rootClassName = cn(
-    s.root,
+    // s.root,
     {
-      [s.ghost]: variant === 'ghost',
-      [s.slim]: variant === 'slim',
-      [s.naked]: variant === 'naked',
+      // [s.ghost]: variant === 'ghost',
+      // [s.slim]: variant === 'slim',
+      // [s.naked]: variant === 'naked',
       [s.loading]: loading,
       [s.disabled]: disabled,
     },
@@ -63,9 +64,7 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
     >
       {children}
       {loading && (
-        <i className="pl-2 m-0 flex">
-          <span>loading...</span>
-        </i>
+        <BiLoaderCircle className="text-xl text-white animate-spin" />
       )}
     </Component>
   );
