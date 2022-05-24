@@ -43,7 +43,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
               />
             </div>
 
-            <button className="w-full bg-[#b99d6b] text-white text-center border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-left border ">
+            <button className="w-full bg-[#b99d6b] text-white  border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-center border ">
               CREATE ACCOUNT
             </button>
 
