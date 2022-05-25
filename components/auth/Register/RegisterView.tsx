@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Button from '@/components/ui/Button';
+import { authContext } from '../../../state/context/authContext';
 import { auth } from '../../../firebase';
 interface IRegisterProps {}
 export type IStateInput = {
@@ -9,6 +10,7 @@ export type IStateInput = {
   password: string;
 };
 const RegisterView: React.FC<IRegisterProps> = () => {
+  const { dispatch } = useContext(authContext);
   const [loading, setLoading] = useState(false);
   const [formValue, setFormValues] = useState<IStateInput>({
     email: '',
@@ -24,9 +26,10 @@ const RegisterView: React.FC<IRegisterProps> = () => {
         formValue.email,
         formValue.password
       );
+      dispatch({ type: 'REGISTER', payload: result });
       setLoading(false);
-      const user = result.user;
-      console.log(user);
+      const resp = result.user;
+      console.log(resp);
     } catch (error) {
       console.log(error);
       setLoading(false);

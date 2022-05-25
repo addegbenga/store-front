@@ -1,9 +1,12 @@
 import React, { createContext, useReducer } from 'react';
 import authReducer from './authReducer';
+
 interface StateType {
   user: string | null;
+  // Todo: add type safety for dispatch
   dispatch?: any;
 }
+
 const InitialState: StateType = {
   user: null,
 };
