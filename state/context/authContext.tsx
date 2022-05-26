@@ -1,4 +1,5 @@
 import React, { createContext, useReducer } from 'react';
+import { useEffect } from 'react';
 import authReducer from './authReducer';
 
 interface StateType {
@@ -6,15 +7,20 @@ interface StateType {
   // Todo: add type safety for dispatch
   dispatch?: any;
 }
+const ISSERVER = typeof window === 'undefined';
 
 const InitialState: StateType = {
-  user: null,
+  user: !ISSERVER && JSON.parse(localStorage.getItem('user') || ''),
 };
 
 export const authContext = createContext(InitialState);
 
 export const AuthContextprovider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, InitialState);
+
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(state.user));
+  }, [state.user]);
   return (
     <authContext.Provider value={{ user: state.user, dispatch }}>
       {children}

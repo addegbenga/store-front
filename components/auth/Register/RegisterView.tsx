@@ -72,11 +72,6 @@ const RegisterView: React.FC<IRegisterProps> = () => {
                 onChange={(e) => handleChange(e)}
               />
             </div>
-
-            {/* <button
-              type="submit"
-              className="w-full bg-[#b99d6b] text-white  border-[#b99d6b] text-sm p-2 md:p-3 pl-3 text-center border "
-            ></button> */}
             <Button
               type="submit"
               loading={loading}
