@@ -1,22 +1,40 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
+import { FiShoppingBag } from 'react-icons/fi';
 import { NextPageWithLayout } from '../../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
+import Button from '@/components/ui/Button';
 const MyOrders: NextPageWithLayout = () => {
   return (
-    <div className="w-full bg-red-300">
-      <div className="grid gap-1">
-        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black w-fit">
-          WELCOME TO MY ORDERS PAGE
-        </h1>
-        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black w-fit">
-          YOUR ACCOUNT
-        </h1>
+    <div className="w-full ">
+      <div className="grid gap-3">
+        <div className="grid gap-2 bg-white shadow py-7 px-9">
+          <FiShoppingBag size={35} />
+          <h1 className="text-2xl font-bold ">MY ORDERS</h1>
+        </div>
+        <div className="flex flex-col items-center gap-4 pt-12 bg-white pb-7">
+          <FiShoppingBag className="mt-4 mb-2 text-4xl" />
+          <div className="text-center">
+            <h1 className="font-semibold">YOU CURRENTLY HAVE NO ORDERS</h1>
+            <p>Best get shopping KARA....</p>
+          </div>
+          <Button className="w-2/5 p-3 px-4 font-semibold text-white bg-black">
+            START SHOPPING
+          </Button>
+        </div>
       </div>
     </div>
   );
 };
+
 MyOrders.getLayout = (page) => {
-  return <AccountLayout>{page}</AccountLayout>;
+  return (
+    <MediaQuery minWidth={1224}>
+      {(matches: any) =>
+        matches ? <AccountLayout>{page}</AccountLayout> : <>{page}</>
+      }
+    </MediaQuery>
+  );
 };
 
 export default MyOrders;

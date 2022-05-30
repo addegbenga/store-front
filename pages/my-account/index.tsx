@@ -1,22 +1,22 @@
 import React from 'react';
 import { NextPageWithLayout } from '../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
-const MyAcccount: NextPageWithLayout = () => {
+const MyAccount: NextPageWithLayout = () => {
   return (
-    <div className="w-full bg-green-300">
-      <div className="grid gap-1">
-        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black w-fit">
+    <div className="hidden w-full bg-white shadow lg:block h-fit">
+      <div className="grid gap-1 px-3 py-10">
+        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black rounded w-fit">
           WELCOME TO
         </h1>
-        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black w-fit">
+        <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black rounded w-fit">
           YOUR ACCOUNT
         </h1>
       </div>
     </div>
   );
 };
-MyAcccount.getLayout = (page) => {
+MyAccount.getLayout = (page) => {
   return <AccountLayout>{page}</AccountLayout>;
 };
 
-export default MyAcccount;
+export default MyAccount;

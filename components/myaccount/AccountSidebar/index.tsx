@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { AiFillAccountBook } from 'react-icons/ai';
+import { FiShoppingBag } from 'react-icons/fi';
 
 const data = [
   {
@@ -11,7 +12,7 @@ const data = [
   {
     name: 'My orders',
     url: '/my-account/orders',
-    icon: <AiFillAccountBook className="text-xl" />,
+    icon: <FiShoppingBag className="text-xl" />,
   },
   {
     name: 'My details',
@@ -28,11 +29,26 @@ const data = [
     url: '/my-account',
     icon: <AiFillAccountBook className="text-xl" />,
   },
+  {
+    name: 'Payment Methods',
+    url: '/my-account',
+    icon: <AiFillAccountBook className="text-xl" />,
+  },
+  {
+    name: 'Payment Methods',
+    url: '/my-account',
+    icon: <AiFillAccountBook className="text-xl" />,
+  },
+  {
+    name: 'Payment Methods',
+    url: '/my-account',
+    icon: <AiFillAccountBook className="text-xl" />,
+  },
 ];
 const AccountSidebar: React.FC = () => {
   return (
-    <aside className="h-screen ">
-      <section className="grid gap-1 border w-80">
+    <aside className="w-full h-screen lg:w-fit ">
+      <section className="grid w-full gap-1 border lg:w-80 ">
         <div className="flex items-center w-full gap-2 py-10 pr-10 bg-white shadow-lg">
           <div className="flex items-center justify-center w-24 h-24 bg-black rounded-full">
             <h1 className="text-2xl font-bold text-white">AG</h1>
