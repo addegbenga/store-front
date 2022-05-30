@@ -2,6 +2,7 @@ import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface ICartProps {
   isOpen: boolean;
@@ -100,7 +101,7 @@ const CartModal: React.FC<ICartProps> = ({ isOpen, handleClose }) => {
                         VIEW CART
                       </button>
                       <button className="bg-green-700 outline-none  p-2.5 text-sm text-white">
-                        CHECK OUT
+                        <Link href="checkouts">CHECK OUT</Link>
                       </button>
                     </div>
                   </div>

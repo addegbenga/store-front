@@ -19,25 +19,33 @@ const TopNavbar: React.FC<ITopNavProps> = () => {
       <div>
         <div className="bg-[#2d2d2d] hidden md:block">
           <div className="container flex justify-between p-2 px-4 mx-auto 2xl:container md:px-10">
-            <div className="flex gap-20 text-xs font-medium text-white">
+            <div className="flex text-xs text-white gap-14">
               <Link href="/account/Login">Login</Link>
               {/* <h1 className="hidden md:block">Wishlist</h1> */}
-              <div className="hidden text-xs font-medium md:block">
-                <Link href="/wishlist">Wishlist(0)</Link>
-              </div>
 
-              <h1 className="hidden text-xs font-medium md:block">
+              <h1 className="hidden text-xs md:block">
                 {' '}
                 <Link href="/checkouts">Checkout</Link>
               </h1>
+              <h1 className="hidden text-xs md:block">
+                {' '}
+                <Link href="/checkouts">About</Link>
+              </h1>
+              <h1 className="hidden text-xs md:block">
+                {' '}
+                <Link href="/checkouts">Delivery</Link>
+              </h1>
             </div>
 
-            <div className="flex gap-2 text-sm text-white md:gap-12">
+            <div className="flex gap-2 text-sm text-white md:gap-10">
               <div className="flex items-center font-medium">
                 <FaUserAlt className="text-lg cursor-pointer" />
               </div>
+
               <div className="flex items-center font-medium">
-                <FaRegHeart className="text-lg cursor-pointer" />
+                <Link href="/wishlist" passHref={true}>
+                  <FaRegHeart className="text-lg cursor-pointer" />
+                </Link>
               </div>
 
               <div onClick={handleOpen} className="flex items-center gap-2">
