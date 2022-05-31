@@ -1,12 +1,11 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import { FiShoppingBag } from 'react-icons/fi';
 import { NextPageWithLayout } from '../../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
 import Button from '@/components/ui/Button';
 const MyOrders: NextPageWithLayout = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full px-2 lg:px-0 ">
       <div className="grid gap-3">
         <div className="grid gap-2 bg-white shadow py-7 px-9">
           <FiShoppingBag size={35} />
@@ -28,13 +27,7 @@ const MyOrders: NextPageWithLayout = () => {
 };
 
 MyOrders.getLayout = (page) => {
-  return (
-    <MediaQuery minWidth={1224}>
-      {(matches: any) =>
-        matches ? <AccountLayout>{page}</AccountLayout> : <>{page}</>
-      }
-    </MediaQuery>
-  );
+  return <AccountLayout>{page}</AccountLayout>;
 };
 
 export default MyOrders;

@@ -3,8 +3,8 @@ import { NextPageWithLayout } from '../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
 const MyAccount: NextPageWithLayout = () => {
   return (
-    <div className="hidden w-full bg-white shadow lg:block h-fit">
-      <div className="grid gap-1 px-3 py-10">
+    <div className="w-full bg-white shadow h-fit">
+      <div className="grid h-40 gap-1 px-3 py-10">
         <h1 className="px-3 py-2 text-3xl font-bold text-white bg-black rounded w-fit">
           WELCOME TO
         </h1>

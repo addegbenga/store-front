@@ -1,13 +1,22 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiFillAccountBook } from 'react-icons/ai';
+import {
+  AiFillAccountBook,
+  AiOutlineContacts,
+  AiOutlineMessage,
+} from 'react-icons/ai';
+import {
+  MdOutlineAccountBalanceWallet,
+  MdOutlineOtherHouses,
+  MdPayment,
+} from 'react-icons/md';
 import { FiShoppingBag } from 'react-icons/fi';
 
 const data = [
   {
     name: 'Account overview',
     url: '/my-account',
-    icon: <AiFillAccountBook className="text-xl" />,
+    icon: <MdOutlineAccountBalanceWallet className="text-xl" />,
   },
   {
     name: 'My orders',
@@ -17,37 +26,37 @@ const data = [
   {
     name: 'My details',
     url: '/my-account/details',
-    icon: <AiFillAccountBook className="text-xl" />,
+    icon: <AiOutlineContacts className="text-xl" />,
   },
   {
     name: 'Address book',
-    url: '/my-account/payment',
-    icon: <AiFillAccountBook className="text-xl" />,
+    url: '/my-account/payment-method',
+    icon: <MdOutlineOtherHouses className="text-xl" />,
   },
   {
     name: 'Payment Methods',
     url: '/my-account',
-    icon: <AiFillAccountBook className="text-xl" />,
+    icon: <MdPayment className="text-xl" />,
   },
   {
-    name: 'Payment Methods',
+    name: 'Contact preferences',
+    url: '/my-account',
+    icon: <AiOutlineMessage className="text-xl" />,
+  },
+  {
+    name: 'Social accounts',
     url: '/my-account',
     icon: <AiFillAccountBook className="text-xl" />,
   },
   {
-    name: 'Payment Methods',
-    url: '/my-account',
-    icon: <AiFillAccountBook className="text-xl" />,
-  },
-  {
-    name: 'Payment Methods',
+    name: 'Sign outs',
     url: '/my-account',
     icon: <AiFillAccountBook className="text-xl" />,
   },
 ];
 const AccountSidebar: React.FC = () => {
   return (
-    <aside className="w-full h-screen lg:w-fit ">
+    <aside className="hidden w-full h-screen lg:block lg:w-fit ">
       <section className="grid w-full gap-1 border lg:w-80 ">
         <div className="flex items-center w-full gap-2 py-10 pr-10 bg-white shadow-lg">
           <div className="flex items-center justify-center w-24 h-24 bg-black rounded-full">
