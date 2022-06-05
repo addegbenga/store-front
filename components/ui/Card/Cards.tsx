@@ -10,9 +10,6 @@ export interface ICardsProps {
   isBg?: Boolean;
   placeholder?: 'blur' | 'empty';
 }
-const myLoader = () => {
-  return '/assets/slide_8_50x.jpg';
-};
 
 const Cards: React.FC<ICardsProps> = ({
   children,
