@@ -1,19 +1,20 @@
 import React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const CartModal: React.FC<any> = () => {
-  let [isOpen, setIsOpen] = useState(false);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+interface ICartProps {
+  isOpen: boolean;
+  handleClose: () => void;
+}
+const CartModal: React.FC<ICartProps> = ({ isOpen, handleClose }) => {
+  // const bool = typeof isOpen === 'undefined' ? false : isOpen;
 
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-20" onClose={closeModal}>
+        <Dialog as="div" className="relative z-20" onClose={handleClose}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -100,7 +101,7 @@ const CartModal: React.FC<any> = () => {
                         VIEW CART
                       </button>
                       <button className="bg-green-700 outline-none  p-2.5 text-sm text-white">
-                        CHECK OUT
+                        <Link href="checkouts">CHECK OUT</Link>
                       </button>
                     </div>
                   </div>

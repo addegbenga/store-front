@@ -1,8 +1,9 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import Button from '@/components/ui/Button';
 import { auth } from '../../../firebase';
+import { authContext } from '../../../state/context/authContext';
 export interface ILoginProps {}
 
 export type IStateInput = {
@@ -11,6 +12,7 @@ export type IStateInput = {
 };
 
 const LoginView: React.FC<ILoginProps> = () => {
+  const { user, dispatch } = useContext(authContext);
   const [formValue, setFormValues] = useState<IStateInput>({
     email: '',
     password: '',
@@ -27,9 +29,11 @@ const LoginView: React.FC<ILoginProps> = () => {
         formValue.password
       );
       setLoading(false);
-      console.log(result);
+      dispatch({ type: 'LOGIN', payload: result });
+      console.log(user, 'result');
     } catch (error) {
       console.log(error);
+      setLoading(false);
     }
   };
   const handleChange = (e: { target: { name: any; value: any } }) => {
