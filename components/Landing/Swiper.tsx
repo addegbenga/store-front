@@ -35,7 +35,7 @@ const MySwiper = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -47,11 +47,11 @@ const MySwiper = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -71,7 +71,7 @@ const MySwiper = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -83,11 +83,11 @@ const MySwiper = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -107,7 +107,7 @@ const MySwiper = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -119,11 +119,11 @@ const MySwiper = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -167,7 +167,7 @@ const MySwiper1 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -179,11 +179,11 @@ const MySwiper1 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -203,7 +203,7 @@ const MySwiper1 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -215,11 +215,11 @@ const MySwiper1 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -239,7 +239,7 @@ const MySwiper1 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -251,11 +251,11 @@ const MySwiper1 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -300,7 +300,7 @@ const MySwiper2 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -312,11 +312,11 @@ const MySwiper2 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -336,7 +336,7 @@ const MySwiper2 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -348,11 +348,11 @@ const MySwiper2 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
@@ -372,7 +372,7 @@ const MySwiper2 = () => {
           backgroundSize: 'cover',
           backgroundPositionX: 'center',
         }}
-        className="h-full bg-red-100  flex justify-center items-center  "
+        className="flex items-center justify-center h-full bg-red-100 "
       >
         {({ isActive }) => (
           <div className="relative ">
@@ -384,11 +384,11 @@ const MySwiper2 = () => {
               }
             >
               {/* <h1>Timeless Design</h1> */}
-              <div className="  text-white z-10 gap-4 flex flex-col justify-center items-center   ">
+              <div className="z-10 flex flex-col items-center justify-center gap-4 text-white ">
                 <h1 className="lg:text-[10rem] text-7xl font-bold lg:leading-[8rem]">
                   300+
                 </h1>
-                <h1 className="md:text-2xl text-sm text-center">
+                <h1 className="text-sm text-center md:text-2xl">
                   NEW STYLES JUST LANDED
                 </h1>
                 <Link passHref={true} href="/collections/wearable">
