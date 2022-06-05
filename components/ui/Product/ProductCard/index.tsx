@@ -11,19 +11,20 @@ interface IProductCardProps {
 }
 const ProductCard: React.FC<IProductCardProps> = ({ price, title, imgSrc }) => {
   return (
-    <div className="flex gap-3 flex-col cursor-pointer">
-      <div className="lg:h-[23rem] h-[14rem] brightness-95 lg:w-[20rem] relative   ">
-        <Link href={`/products/${title}`} passHref={true}>
+    <div className="flex flex-col gap-3 cursor-pointer">
+      <Link href={`/products/${title}`} passHref={true}>
+        <div className="lg:h-[23rem] h-[14rem] brightness-95 lg:w-[20rem] relative   ">
           <Image src={imgSrc} layout="fill" alt="product card" />
-        </Link>
-        <button className="bg-white shadow-xl border cursor-default border-gray-100 rounded-full p-2  z-20 absolute right-2 bottom-2 flex justify-center items-center">
-          <AiOutlineHeart className="text-2xl" />
-        </button>
-      </div>
+
+          <button className="absolute z-20 flex items-center justify-center p-2 bg-white border border-gray-100 rounded-full shadow-xl cursor-default right-2 bottom-2">
+            <AiOutlineHeart className="text-2xl" />
+          </button>
+        </div>
+      </Link>
       <div className="">
-        <p className="text-black text-sm text-opacity-70">{title}</p>
+        <p className="text-sm text-black text-opacity-70">{title}</p>
         <div className="flex items-end">
-          <span className="text-black font-bold text-opacity-60">$</span>
+          <span className="font-bold text-black text-opacity-60">$</span>
           <h1 className="font-bold text-black text-opacity-60">{price}</h1>
         </div>
       </div>

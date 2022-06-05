@@ -1,12 +1,16 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { NextPageWithLayout } from '../page';
-import MainLayout from '@/components/commons/Layout/MainLayout';
+const MainLayout = dynamic(
+  () => import('@/components/commons/Layout/MainLayout'),
+  { ssr: false }
+);
 import RegisterView from '@/components/auth/Register/RegisterView';
 import NavDir from '@/components/commons/Nav/NavDir';
 
 const Register: NextPageWithLayout = () => {
   return (
-    <div className=" 2xl:container mx-auto ">
+    <div className="mx-auto 2xl:container">
       <NavDir />
       <RegisterView />
       {/* <ForgotPasswordView /> */}

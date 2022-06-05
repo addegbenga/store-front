@@ -29,7 +29,7 @@ const LoginView: React.FC<ILoginProps> = () => {
         formValue.password
       );
       setLoading(false);
-      dispatch({ type: 'LOGIN', payload: result });
+      dispatch({ type: 'LOGIN', payload: result.user });
       console.log(user, 'result');
     } catch (error) {
       console.log(error);
