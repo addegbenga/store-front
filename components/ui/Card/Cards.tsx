@@ -29,7 +29,7 @@ const Cards: React.FC<ICardsProps> = ({
             className="absolute"
             // loader={myLoader}
             placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEklEQVR42mN8ev/+fwYgYIQxAE/LB0dS2AWzAAAAAElFTkSuQmCC"
             layout={layoutProps}
             alt={imgProp}
             src={imgSrc}
