@@ -10,7 +10,7 @@ interface StateType {
 const ISSERVER = typeof window === 'undefined';
 
 const InitialState: StateType = {
-  user: !ISSERVER && JSON.parse(localStorage.getItem('user') || ''),
+  user: null,
 };
 
 export const authContext = createContext(InitialState);
