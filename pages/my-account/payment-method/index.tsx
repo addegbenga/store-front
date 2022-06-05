@@ -1,5 +1,4 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import { NextPageWithLayout } from '../../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
 const MyPayment: NextPageWithLayout = () => {
@@ -17,13 +16,7 @@ const MyPayment: NextPageWithLayout = () => {
   );
 };
 MyPayment.getLayout = (page) => {
-  return (
-    <MediaQuery minWidth={1224}>
-      {(matches: any) =>
-        matches ? <AccountLayout>{page}</AccountLayout> : <>{page}</>
-      }
-    </MediaQuery>
-  );
+  return <AccountLayout>{page}</AccountLayout>;
 };
 
 export default MyPayment;

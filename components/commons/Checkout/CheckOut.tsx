@@ -49,7 +49,7 @@ const CheckOut: React.FC<ICheckOutProps> = () => {
                   name="cars"
                   id="cars"
                 >
-                  <option className="text-sm " value="" disabled selected>
+                  <option className="text-sm " defaultValue="hello">
                     select country/region
                   </option>
                   <option value="volvo">Nigeria</option>

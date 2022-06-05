@@ -15,20 +15,20 @@ export default function Gridx5() {
             isBg={true}
           >
             <div className="p-4 relative z-10 md:h-full h-[10rem] ">
-              <div className="border flex justify-center md:text-2xl md:tracking-wide items-center text-white h-full">
+              <div className="flex items-center justify-center h-full text-white border md:text-2xl md:tracking-wide">
                 <h1>END OF SEASON SALE</h1>
               </div>
             </div>
           </Card>
-          <div className="md:grid hidden  md:row-span-3">
+          <div className="hidden md:grid md:row-span-3">
             <Card
               layoutProps="fill"
               imgProp="bg"
-              className="   absolute w-full h-full  "
+              className="  relative h-[20rem] w-full md:h-full  "
               imgSrc="/assets/slide_12.jpg"
             >
-              <div className=" h-full relative z-10  flex justify-center items-center">
-                <div className="border-4 flex justify-center items-center text-white h-60 w-60">
+              <div className="absolute top-0 bottom-0 left-0 right-0 z-10 flex items-center justify-center h-full m-auto ">
+                <div className="flex items-center justify-center text-white border-4 h-60 w-60">
                   <div className="text-5xl">
                     <h1>LAYER</h1>
                     <h1>-OVER-</h1>
@@ -44,11 +44,11 @@ export default function Gridx5() {
             <Card
               layoutProps="fill"
               imgProp="bg"
-              className="   absolute w-full h-full  "
+              className="absolute w-full h-full "
               imgSrc="/assets/newsletter_banner.jpg"
             >
               <div className="md:h-full relative z-10 h-[20rem] flex flex-col mx-5 md:mx-14 justify-center items-center">
-                <h1 className="text-4xl px-8 py-5 text-white">
+                <h1 className="px-8 py-5 text-4xl text-white">
                   BE THE FIRST TO KNOW
                 </h1>
                 <input
@@ -59,15 +59,15 @@ export default function Gridx5() {
               </div>
             </Card>
           </div>
-          <div className="grid md:hidden  md:row-span-3">
+          <div className="grid md:hidden md:row-span-3">
             <Card
               layoutProps="fill"
               imgProp="bg"
-              className="   absolute w-full h-full  "
+              className="relative w-full h-[24rem] md:h-full "
               imgSrc="/assets/slide_12.jpg"
             >
-              <div className="p-20 h-full">
-                <div className="border-4 flex justify-center items-center text-white h-full">
+              <div className="absolute top-0 bottom-0 left-0 right-0 h-full p-20 m-auto">
+                <div className="flex items-center justify-center h-full text-white border-4">
                   <div className="text-5xl">
                     <h1>LAYER</h1>
                     <h1>-OVER-</h1>
@@ -86,7 +86,7 @@ export default function Gridx5() {
             isBg={true}
           >
             <div className="md:h-full relative z-10  h-[10rem] p-4">
-              <div className="border h-full flex justify-center items-center flex-col text-white">
+              <div className="flex flex-col items-center justify-center h-full text-white border">
                 <FaPinterestP size={32} />
                 <h1>JOIN US ON PINTEREST</h1>
               </div>

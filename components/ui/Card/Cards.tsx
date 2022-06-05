@@ -8,6 +8,7 @@ export interface ICardsProps {
   className: string;
   layoutProps: 'fixed' | 'responsive' | 'fill' | 'intrinsic';
   isBg?: Boolean;
+  placeholder?: 'blur' | 'empty';
 }
 
 const Cards: React.FC<ICardsProps> = ({
@@ -25,11 +26,13 @@ const Cards: React.FC<ICardsProps> = ({
       <div className={rootClassName}>
         {!isBg && (
           <Image
+            className="absolute"
+            // loader={myLoader}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
             layout={layoutProps}
             alt={imgProp}
             src={imgSrc}
-            objectFit="cover"
-            objectPosition="center"
           />
         )}
       </div>

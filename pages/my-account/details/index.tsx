@@ -1,5 +1,4 @@
 import React from 'react';
-import MediaQuery from 'react-responsive';
 import { AiOutlineContacts } from 'react-icons/ai';
 import { NextPageWithLayout } from '../../page';
 import AccountLayout from '@/components/myaccount/AccountLayout';
@@ -60,13 +59,7 @@ const AccountDetails: NextPageWithLayout = () => {
   );
 };
 AccountDetails.getLayout = (page) => {
-  return (
-    <MediaQuery minWidth={1224}>
-      {(matches: any) =>
-        matches ? <AccountLayout>{page}</AccountLayout> : <>{page}</>
-      }
-    </MediaQuery>
-  );
+  return <AccountLayout>{page}</AccountLayout>;
 };
 
 export default AccountDetails;
