@@ -8,7 +8,11 @@ export interface ICardsProps {
   className: string;
   layoutProps: 'fixed' | 'responsive' | 'fill' | 'intrinsic';
   isBg?: Boolean;
+  placeholder?: 'blur' | 'empty';
 }
+const myLoader = () => {
+  return '/assets/slide_8_50x.jpg';
+};
 
 const Cards: React.FC<ICardsProps> = ({
   children,
@@ -26,8 +30,10 @@ const Cards: React.FC<ICardsProps> = ({
         {!isBg && (
           <Image
             className="absolute"
+            // loader={myLoader}
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
             layout={layoutProps}
-            // layout="fill"
             alt={imgProp}
             src={imgSrc}
           />
