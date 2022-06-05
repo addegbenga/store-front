@@ -13,7 +13,7 @@ export default function Gridx4() {
 
   return (
     <div className="bg-white">
-      <div className="grid mt-1 gap-1 md:grid-cols-2  mx-1">
+      <div className="grid gap-1 mx-1 mt-1 md:grid-cols-2">
         <div className="md:h-full  h-[12rem]">
           <video
             style={{ cursor: 'pointer' }}
@@ -27,8 +27,8 @@ export default function Gridx4() {
           </video>
         </div>
 
-        <div className="grid md:grid-cols-2  gap-1 ">
-          <div className="grid  gap-1 ">
+        <div className="grid gap-1 md:grid-cols-2 ">
+          <div className="grid gap-1 ">
             <Card
               layoutProps="fill"
               imgProp="bg"
@@ -37,13 +37,13 @@ export default function Gridx4() {
               isBg={true}
             >
               <div className="md:h-full h-[15rem] relative z-10  p-3">
-                <div className="border h-full flex justify-center items-center  flex-col gap-3 ">
+                <div className="flex flex-col items-center justify-center h-full gap-3 border ">
                   <AiOutlineTwitter size={40} color="white" />
                   <div>
-                    <h1 className="text-white text-2xl text-center">
+                    <h1 className="text-2xl text-center text-white">
                       FOLLOW US ON
                     </h1>
-                    <h1 className="text-white text-2xl text-center">TWITTER</h1>
+                    <h1 className="text-2xl text-center text-white">TWITTER</h1>
                   </div>
                 </div>
               </div>
@@ -56,13 +56,13 @@ export default function Gridx4() {
               isBg={true}
             >
               <div className="md:h-full h-[15rem] relative z-10  p-3">
-                <div className="border h-full flex justify-center items-center  flex-col gap-2 ">
+                <div className="flex flex-col items-center justify-center h-full gap-2 border ">
                   <FaFacebookF size={40} color="white" />
                   <div>
-                    <h1 className="text-white text-2xl text-center">
+                    <h1 className="text-2xl text-center text-white">
                       FOLLOW US ON
                     </h1>
-                    <h1 className="text-white text-2xl text-center">
+                    <h1 className="text-2xl text-center text-white">
                       FACEBOOK
                     </h1>
                   </div>
@@ -70,10 +70,10 @@ export default function Gridx4() {
               </div>
             </Card>
           </div>
-          <div className="grid  gap-1">
+          <div className="grid gap-1">
             <div className="grid ">
               {/* <Card
-                className="w-full h-full absolute"
+                className="absolute w-full h-full"
                 imgProp="banner"
                 imgSrc="/assets/banner_3.jpg"
                 layoutProps="fill"
@@ -85,10 +85,10 @@ export default function Gridx4() {
               <Card
                 layoutProps="fill"
                 imgProp="banner"
-                className=" absolute w-full h-full  "
+                className=" relative w-full h-[32rem] md:h-full  "
                 imgSrc="/assets/banner_3.jpg"
               >
-                <div className="flex flex-col gap-1 relative z-10 h-[30rem] justify-center items-center  md:h-full">
+                <div className="flex flex-col gap-1 absolute top-0 bottom-0 right-0 left-0 m-auto z-10 h-[30rem] justify-center items-center  md:h-full">
                   <Image
                     src="/assets/insta.svg"
                     width={40}
@@ -98,10 +98,10 @@ export default function Gridx4() {
                   />
 
                   <div>
-                    <h1 className="text-white text-2xl text-center">
+                    <h1 className="text-2xl text-center text-white">
                       FOLLOW US ON
                     </h1>
-                    <h1 className="text-white text-2xl text-center">
+                    <h1 className="text-2xl text-center text-white">
                       INSTAGRAM
                     </h1>
                   </div>

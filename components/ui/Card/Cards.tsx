@@ -25,11 +25,11 @@ const Cards: React.FC<ICardsProps> = ({
       <div className={rootClassName}>
         {!isBg && (
           <Image
+            className="absolute"
             layout={layoutProps}
+            // layout="fill"
             alt={imgProp}
             src={imgSrc}
-            objectFit="cover"
-            objectPosition="center"
           />
         )}
       </div>
