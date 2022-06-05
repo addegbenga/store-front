@@ -1,6 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { NextPageWithLayout } from '../page';
-import MainLayout from '@/components/commons/Layout/MainLayout';
+const MainLayout = dynamic(
+  () => import('@/components/commons/Layout/MainLayout'),
+  { ssr: false }
+);
+// import MainLayout from '@/components/commons/Layout/MainLayout';
 import NavDir from '@/components/commons/Nav/NavDir';
 import ProductDetail from '@/components/ui/Product/ProductDetail';
 

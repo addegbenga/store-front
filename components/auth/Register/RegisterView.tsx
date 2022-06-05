@@ -3,9 +3,12 @@ import { useState, useContext } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Button from '@/components/ui/Button';
 import { authContext } from '../../../state/context/authContext';
-import { auth } from '../../../firebase';
+
+import { setDoc, doc } from 'firebase/firestore';
+import { auth, db } from '../../../firebase';
 interface IRegisterProps {}
 export type IStateInput = {
+  name: string;
   email: string;
   password: string;
 };
@@ -13,6 +16,7 @@ const RegisterView: React.FC<IRegisterProps> = () => {
   const { dispatch } = useContext(authContext);
   const [loading, setLoading] = useState(false);
   const [formValue, setFormValues] = useState<IStateInput>({
+    name: '',
     email: '',
     password: '',
   });
@@ -26,6 +30,11 @@ const RegisterView: React.FC<IRegisterProps> = () => {
         formValue.email,
         formValue.password
       );
+      await setDoc(doc(db, 'users', result.user.uid), {
+        name: formValue.name,
+        email: formValue.email,
+        password: formValue.password,
+      });
       dispatch({ type: 'REGISTER', payload: result });
       setLoading(false);
       const resp = result.user;
@@ -50,6 +59,17 @@ const RegisterView: React.FC<IRegisterProps> = () => {
         </p>
         <div className="py-16">
           <form onSubmit={handleSubmit} className="grid gap-4">
+            <div>
+              <h1 className="text-sm mb-1.5">Full Name</h1>
+              <input
+                className="border md:p-2.5  w-full p-1.5 pl-3"
+                type="text"
+                name="name"
+                placeholder="Your Fullname*"
+                value={formValue.name}
+                onChange={(e) => handleChange(e)}
+              />
+            </div>
             <div>
               <h1 className="text-sm mb-1.5">Email</h1>
               <input

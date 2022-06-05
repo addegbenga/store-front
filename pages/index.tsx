@@ -1,5 +1,9 @@
 import { NextPageWithLayout } from './page';
-import MainLayout from '@/components/commons/Layout/MainLayout';
+import dynamic from 'next/dynamic';
+const MainLayout = dynamic(
+  () => import('@/components/commons/Layout/MainLayout'),
+  { ssr: false }
+);
 import HomePageSections from '@/components/Landing';
 
 const index: NextPageWithLayout = () => {

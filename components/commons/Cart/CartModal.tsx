@@ -101,7 +101,7 @@ const CartModal: React.FC<ICartProps> = ({ isOpen, handleClose }) => {
                         VIEW CART
                       </button>
                       <button className="bg-green-700 outline-none  p-2.5 text-sm text-white">
-                        <Link href="checkouts">CHECK OUT</Link>
+                        <Link href="/checkouts">CHECK OUT</Link>
                       </button>
                     </div>
                   </div>

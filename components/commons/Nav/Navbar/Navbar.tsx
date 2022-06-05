@@ -19,20 +19,20 @@ const Navbar: React.FC<INavProps> = () => {
       <Sidebar handleCloseModal={handleCloseModal} isOpen={open} />
 
       <div>
-        <div className="bg-white sticky top-0 md:top-9 w-full z-20  md:py-9 py-6  border-b border-black border-opacity-5">
-          <div className="flex container 2xl:container px-4 mx-auto justify-between items-center">
+        <div className="sticky top-0 z-20 w-full py-6 bg-white border-b border-black md:top-9 md:py-9 border-opacity-5">
+          <div className="container flex items-center justify-between px-4 mx-auto 2xl:container">
             <Link passHref={true} href="/">
-              <h1 className="font-bold cursor-pointer text-2xl ">KARA</h1>
+              <h1 className="text-2xl font-bold cursor-pointer ">KARA</h1>
             </Link>
 
-            <div className="hidden text-medium  md:flex  gap-10 text-xs">
+            <div className="hidden gap-10 text-xs text-medium md:flex">
               <h1>SKINS</h1>
               <h1>FEATURES</h1>
               <h1>FASHION</h1>
               <h1>PAGES</h1>
               <h1>BUY VENEDOR</h1>
             </div>
-            <div className="flex gap-6 items-center md:hidden ">
+            <div className="flex items-center gap-6 md:hidden ">
               <FaBars
                 onClick={handleOpenModal}
                 size={18}
@@ -40,9 +40,9 @@ const Navbar: React.FC<INavProps> = () => {
               />
               <AiOutlineSearch />
             </div>
-            <div className="md:flex gap-2  items-center hidden ">
+            <div className="items-center hidden gap-2 md:flex ">
               <input
-                className="bg-transparent border-b border-black text-sm outline-none placeholder-black"
+                className="text-sm placeholder-black bg-transparent border-b border-black outline-none"
                 type="text"
                 placeholder="Search our store"
               />

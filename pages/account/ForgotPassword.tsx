@@ -1,6 +1,10 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { NextPageWithLayout } from '../page';
-import MainLayout from '@/components/commons/Layout/MainLayout';
+const MainLayout = dynamic(
+  () => import('@/components/commons/Layout/MainLayout'),
+  { ssr: false }
+);
 import ForgotPasswordView from '@/components/auth/ForgotPassword';
 import NavDir from '@/components/commons/Nav/NavDir';
 

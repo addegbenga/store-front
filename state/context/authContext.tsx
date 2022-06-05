@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import authReducer from './authReducer';
 
 interface StateType {
-  user: string | null;
+  user: string | null | any;
   // Todo: add type safety for dispatch
   dispatch?: any;
 }
